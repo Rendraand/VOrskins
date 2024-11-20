@@ -1,0 +1,15 @@
+{
+  "name": "vorskins",
+  "version": "1.0.0",
+  "description": "VOrkins is a e-commerce website for body care and skin care, this is my website development project for Human and Computer Interaction (HCI) Course. And it's only front-end but functional.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
