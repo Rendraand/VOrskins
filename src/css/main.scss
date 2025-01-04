@@ -1,0 +1,151 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+
+// Main font-family
+@font-face {
+    font-family: GantariFont;
+    src: url(../../assets/fonts/Gantari/Gantari-VariableFont_wght.ttf);
+}
+
+
+// main color-pallete
+$vorskins-dark:                 #1A1A1D;
+$vorskins-dark-purple:          #3B1C32;
+$vorskins-primary:              #6A1E55;
+$vorskins-primary-subtle:       #A64D79;
+
+// font-family
+$font-family-base:              GantariFont;
+
+// color
+$body-bg-dark:                  $vorskins-dark;
+
+// modal
+$modal-fade-transform:          scale(.95);
+$modal-transition:              transform 0.2s ease-in-out;
+$modal-sm:                      400px;
+
+// accordion
+$accordion-button-active-bg:            transparent;
+$accordion-button-focus-box-shadow:     none;
+$accordion-border-width:                0px;
+$accordion-button-active-color:         white;
+$accordion-icon-color-dark:             white;
+$accordion-icon-active-color-dark:      white;
+
+// carousel
+$carousel-control-icon-width:           1.5rem;
+$carousel-control-width:                auto;
+$carousel-indicator-width:              10px;
+$carousel-indicator-height:             10px;
+
+// progress
+$progress-height:                       0.375rem;
+
+// form input
+$focus-ring-color:                      rgba($vorskins-primary-subtle, 0.25);
+$form-check-input-width:                1.25em;
+$form-check-min-height:                 1.75em;
+
+// select
+$form-select-focus-box-shadow:          0 0 0 rgba(0, 0, 0, 0);
+
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+
+
+// font-size
+$added-font-size: (
+    7:          $font-size-base * 0.875,
+    8:          $font-size-base * 0.75
+);
+$font-sizes:    map-merge($font-sizes, $added-font-size);
+
+// -- custom theme color start -- //
+$custom-theme: (
+    "vor-dark":                 $vorskins-dark,
+    "vor-dark-purple":          $vorskins-dark-purple,
+    "vor-primary":              $vorskins-primary,
+    "vor-primary-subtle":       $vorskins-primary-subtle,
+
+    "success-subtle":           $teal-500,
+    "orange":                   $orange
+);
+$theme-colors:                  map-merge($theme-colors, $custom-theme);
+
+$custom-shade-colors: (
+    "vor-darker-100":           shade-color($vorskins-dark, 10%),
+    "vor-darker-200":           shade-color($vorskins-dark, 20%),
+    "vor-darker-300":           shade-color($vorskins-dark, 30%),
+
+    "vor-darker-purple-100":    shade-color($vorskins-dark-purple, 15%),
+    "vor-darker-purple-200":    shade-color($vorskins-dark-purple, 30%)
+);
+$theme-colors:                  map-merge($theme-colors, $custom-shade-colors);
+
+$custom-tint-colors: (
+    "vor-lighter-100":          tint-color($vorskins-dark, 5%),
+    "vor-lighter-200":          tint-color($vorskins-dark, 10%),
+    "vor-lighter-300":          tint-color($vorskins-dark, 15%),
+    "vor-lighter-400":          tint-color($vorskins-dark, 20%),
+    "vor-lighter-500":          tint-color($vorskins-dark, 30%),
+    "vor-lighter-600":          tint-color($vorskins-dark, 40%),
+
+    "vor-secondary":            tint-color($vorskins-dark, 55%),
+
+    "vor-light":                tint-color($vorskins-dark, 75%),
+);
+$theme-colors:                  map-merge($theme-colors, $custom-tint-colors);
+// -- custom theme color end -- //
+
+// custom aspect ratio
+$custom-aspect-ratio: (
+    "27x10":        calc(10 / 27 * 100%)
+);
+$aspect-ratios:     map-merge($aspect-ratios , $custom-aspect-ratio);
+
+// box shadow
+$box-shadow:        0 0 .875rem rgba(tint-color($vorskins-dark, 75%), .125);
+$box-shadow-sm:     0 0 .375rem rgba(tint-color($vorskins-dark, 75%), .25);
+
+// form input | form check
+$input-border-color:                        var(--#{$prefix}vor-lighter-500);
+$input-focus-border-color:                  $vorskins-primary-subtle;
+$input-placeholder-color:                   var(--#{$prefix}vor-secondary);
+$input-focus-box-shadow:                    none;
+
+$form-check-input-checked-bg-color:         $vorskins-primary-subtle;
+$form-check-input-checked-border-color:     $form-check-input-checked-bg-color;
+$form-check-input-focus-border:             $vorskins-primary-subtle;
+$form-check-input-focus-box-shadow:         0 0 .25 0 rgba($vorskins-primary-subtle, .25) !default;
+$form-check-input-border:                   1.5px solid var(--#{$prefix}border-color);
+
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+
+// modify line-height utilities
+$utilities: map-merge(
+  $utilities,
+  (
+    "line-height": map-merge(
+      map-get($utilities, "line-height"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "line-height"), "values"),
+          (md: 1.75),
+        ),
+      ),
+    ),
+  )
+);
+
+
+@import "../../node_modules/bootstrap/scss/utilities/api";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Then add additional custom code here

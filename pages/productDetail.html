@@ -3,97 +3,256 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product</title>
-    <link rel="stylesheet" href="../src/main.css" />
+    <title>Skinceuticals - C E Ferulic</title>
+    <link rel="stylesheet" href="../src/css/main.css" />
+    <link rel="stylesheet" href="../src/css/styling.css" />
+    <link rel="icon" href="../assets/img/vorskins-head-icon-alter.png" />
   </head>
-  <body>
-    <!-- first navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary pt-4 pb-2">
-      <div class="container-fluid mx-4">
-        <div class="d-flex w-50">
-          <a class="navbar-brand" href="#">VORSKINS</a>
-          <form role="search" class="ms-5 flex-grow-1">
+  <body data-bs-theme="dark">
+    <!-- first + second navbar -->
+    <nav
+      class="navbar navbar-expand-lg sticky-top flex-column px-3 bg-vor-darker-300"
+    >
+      <div class="container-fluid px-3">
+        <div class="d-flex justify-content-between align-items-center gap-3">
+          <button
+            class="navbar-toggler p-1 border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasSidebar"
+            aria-controls="offcanvasSidebar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="fs-1 text-decoration-none text-white aboreto" href="#"
+            >V<span class="logo gradient-font">O</span>RSKINS</a
+          >
+        </div>
+
+        <div class="row w-50 justify-content-center d-none d-lg-flex">
+          <form role="search" class="position-relative col-8 nav-search-bar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="21"
+              fill="currentColor"
+              class="bi bi-search position-absolute"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              />
+            </svg>
+
             <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
+              class="form-control px-5 py-2 bg-vor-lighter-100 main-search-form"
+              placeholder="What are you looking for?"
               aria-label="Search"
             />
+
+            <button class="position-absolute clear-search-btn" type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-x"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+                />
+              </svg>
+            </button>
           </form>
         </div>
 
-        <div class="d-flex gap-4 align-items-center">
-          <div class="d-flex align-items-center gap-1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              class="bi bi-person-fill"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
-              />
-            </svg>
-            <a
-              href="#"
-              class="primary-link"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              >Log In</a
-            >
-            <span> / </span>
-            <a
-              href="#"
-              class="primary-link"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              >Register</a
-            >
-          </div>
+        <div class="d-flex gap-3 align-items-center">
+          <div class="d-flex gap-3">
+            <div class="d-none d-sm-flex align-items-center gap-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-person-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                />
+              </svg>
+              <a
+                href="#"
+                class="text-white text-decoration-none fs-8"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Log in</a
+              >
+              <span class="fs-7"> / </span>
+              <a
+                href="#"
+                class="text-white text-decoration-none fs-8"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Register</a
+              >
+            </div>
 
-          <div class="d-flex align-items-center gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              fill="currentColor"
-              class="bi bi-bag-fill"
-              viewBox="0 0 16 16"
+            <div
+              class="d-flex position-relative align-items-center gap-1 bag-dropdown-toggler"
             >
-              <path
-                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"
-              />
-            </svg>
-            <a href="#" class="primary-link">Bag</a>
+              <a
+                href="#"
+                class="text-white text-decoration-none py-4 d-flex align-items-center gap-2 fs-8"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-bag-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"
+                  />
+                </svg>
+                Bag
+              </a>
+
+              <!-- Bag Dropdown -->
+              <div
+                class="position-absolute rounded-3 p-4 bg-vor-darker-200 shadow-sm bag-dropdown"
+              >
+                <!-- Header -->
+                <h4 class="mb-4">Shopping bag</h4>
+
+                <!-- Bag Item -->
+                <div class="bag-items-container pe-3">
+                  <div class="d-flex column-gap-2 align-items-center py-3">
+                    <div class="w-25 d-flex justify-content-center">
+                      <img
+                        src="../assets/img/new-arrivals-6.png"
+                        alt="Cart Item 1"
+                        width="75%"
+                      />
+                    </div>
+
+                    <div class="flex-grow-1">
+                      <p class="mb-2 lh-1">
+                        <span class="fw-medium">Kiehl's</span> - Ultra Facial
+                        Cream
+                      </p>
+                      <p class="fw-medium mb-3 lh-1"></p>
+                      <div class="row justify-content-between">
+                        <div class="d-flex col-6">
+                          <button
+                            type="button"
+                            class="btn btn-outline-vor-lighter-400 p-2 d-flex justify-content-center rounded-2 rounded-end-0 border-end-0 text-white"
+                            onclick="subItem()"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-dash"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"
+                              />
+                            </svg>
+                          </button>
+
+                          <span
+                            class="d-flex flex-grow-1 justify-content-center align-items-center p-2 lh-1 border-top border-bottom border-vor-lighter-400"
+                          ></span>
+
+                          <button
+                            type="button"
+                            class="btn btn-outline-vor-lighter-400 p-2 d-flex justify-content-center rounded-2 rounded-start-0 border-start-0 text-white"
+                            onclick="addItem()"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-plus"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                        <a
+                          href="#"
+                          class="col-2 d-flex justify-content-center align-items-center px-2 text-decoration-none remove-icon-btn"
+                          title="Remove"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-trash3 z-2 trash-can-animation"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Subtotal -->
+                <div
+                  class="mb-3 pt-3 d-flex justify-content-between align-items-center"
+                >
+                  <span>Subtotal:</span>
+                  <span class="fw-medium">Rp456.456</span>
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-flex column-gap-3">
+                  <button
+                    class="btn btn-outline-vor-lighter-400 text-white py-2 rounded-3 fw-medium w-50"
+                  >
+                    View Bag
+                  </button>
+                  <button
+                    class="py-2 btn btn-vor-primary rounded-3 fw-semibold w-50"
+                  >
+                    Checkout
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </nav>
 
-    <!-- second navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-      <div class="container-fluid">
-        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
+      <!-- second navbar -->
+      <div class="container-fluid px-3">
+        <div class="collapse navbar-collapse justify-content-center mt-3">
+          <ul class="navbar-nav column-gap-5 text-center">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a
+                class="nav-link link-vor-primary-subtle"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutUs.html">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="products.html">Products</a>
@@ -102,45 +261,173 @@
               <a class="nav-link" href="#">Promotion</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="aboutUs.html">About us</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="subscribe.html">Subsribe</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
+            <form class="flex-grow-1 d-block d-lg-none">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Main Container -->
-    <div class="p-5">
-      <!-- Product Display -->
-      <div class="row">
-        <div class="overflow-hidden col-5">
-          <img
-            src="../assets/img/Brown-and-White-Modern-Skincare-Presentation.png"
-            alt="..."
-            width="100%"
-            class="d-block mx-auto"
+    <!-- offcanvas sidebar -->
+    <div
+      class="offcanvas offcanvas-start bg-vor-darker-200"
+      tabindex="-1"
+      id="offcanvasSidebar"
+    >
+      <div class="offcanvas-header">
+        <a class="fs-1 text-decoration-none text-white aboreto" href="#"
+          >V<span class="logo gradient-font">O</span>RSKINS</a
+        >
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body pt-0">
+        <ul class="navbar-nav row-gap-2 mb-3">
+          <li class="nav-item ps-3">
+            <a class="nav-link active" aria-current="page" href="index.html"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item ps-3">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+          <li class="nav-item ps-3">
+            <a class="nav-link" href="#">Promotion</a>
+          </li>
+          <li class="nav-item ps-3">
+            <a class="nav-link" href="aboutUs.html">About us</a>
+          </li>
+          <li class="nav-item ps-3">
+            <a class="nav-link" href="subscribe.html">Subsribe</a>
+          </li>
+        </ul>
+        <form
+          role="search"
+          class="w-75 mx-auto position-relative mb-2 offcanvas-search-bar"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="21"
+            fill="currentColor"
+            class="bi bi-search position-absolute text-vor-secondary"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+            />
+          </svg>
+
+          <input
+            class="form-control bg-vor-lighter-100 px-5 main-search-form"
+            type="text"
+            placeholder="Search here..."
+            aria-label="Search"
           />
+
+          <button class="position-absolute clear-search-btn" type="button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="bi bi-x"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+              />
+            </svg>
+          </button>
+        </form>
+        <div class="mt-4 d-flex d-sm-none column-gap-2">
+          <button
+            class="w-50 d-flex justify-content-center align-items-center column-gap-1 btn btn-outline-vor-lighter-400 text-white rounded-pill fw-medium"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              fill="currentColor"
+              class="bi bi-person"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+              />
+            </svg>
+            Login
+          </button>
+          <button
+            class="w-50 btn btn-vor-primary rounded-pill fw-medium hover-darker"
+          >
+            Register
+          </button>
         </div>
-        <div class="px-4 col-7">
-          <h2>Product Name</h2>
-          <p>Product Desc Summary</p>
+      </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container pt-4 px-4 pb-5">
+      <!-- Product Display -->
+      <div class="row justify-content-center">
+        <!-- Image -->
+        <div class="col-12 col-lg-6">
           <div class="d-flex">
-            <div class="d-flex align-items-center column-gap-1 pe-3 border-end">
+            <img
+              src="../assets/img/new-arrivals-1.png"
+              alt="..."
+              class="d-block mx-auto"
+              style="max-height: 300px"
+            />
+          </div>
+        </div>
+
+        <!-- Details -->
+        <div class="col-12 col-lg-6">
+          <h3>Skinceuticals - C E Ferulic</h3>
+          <p class="text-vor-secondary">Ferulic acid with 15% Vitamin C</p>
+
+          <div class="d-flex mb-3">
+            <p class="fw-medium fs-3 m-0 pe-3 border-end border-vor-secondary">
+              Rp187.000
+            </p>
+            <div
+              class="d-flex align-items-center column-gap-1 px-3 border-end border-vor-secondary"
+            >
               <span class="me-2">4.7</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
-                fill="currentColor"
+                fill="var(--bs-warning)"
                 class="bi bi-star-fill"
                 viewBox="0 0 16 16"
               >
+                <defs>
+                  <linearGradient
+                    id="#starsGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" style="stop-color: var(--bs-orange)" />
+                    <stop offset="100%" style="stop-color: var(--bs-warning)" />
+                  </linearGradient>
+                </defs>
                 <path
                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
                 />
@@ -149,7 +436,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
-                fill="currentColor"
+                fill="url(#starsGradient)"
                 class="bi bi-star-fill"
                 viewBox="0 0 16 16"
               >
@@ -194,28 +481,92 @@
                 />
               </svg>
             </div>
-            <span class="ms-3">500+ Review</span>
-          </div>
-          <p class="text-primary fw-medium fs-4">Rp 187.000</p>
-          <div class="d-flex align-items-center mb-3">
-            <span class="me-3">Quantity</span>
-            <div
-              class="btn-group border w-25 align-items-center me-3"
-              role="group"
-              aria-label="Basic example"
+            <span class="ms-3 align-self-center text-vor-secondary"
+              >500+ Reviews</span
             >
-              <button type="button" class="btn btn-light">-</button>
-              <span class="w-50 text-center">1</span>
-              <button type="button" class="btn btn-light">+</button>
-            </div>
-            <span class="text-secondary">172 Stock Remaining</span>
           </div>
 
-          <div class="w-75">
-            <div class="row column-gap-3">
-              <button class="btn btn-primary fw-medium col-3">Buy Now</button>
+          <div
+            class="d-flex align-items-center justify-content-between mb-3 py-3"
+          >
+            <div
+              class="d-flex align-items-center column-gap-3"
+              style="width: 200px"
+            >
+              <span>Quantity</span>
+              <div class="d-flex align-items-center">
+                <button
+                  type="button"
+                  class="btn p-2 d-flex border border-end-0 border-vor-lighter-300 rounded-0 rounded-start"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-dash"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"
+                    />
+                  </svg>
+                </button>
+
+                <span
+                  class="d-flex align-items-center py-2 px-3 lh-1 border-top border-bottom border-vor-lighter-300"
+                  >1</span
+                >
+
+                <button
+                  type="button"
+                  class="btn p-2 d-flex border border-start-0 border-vor-lighter-300 rounded-0 rounded-end"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-plus"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="d-flex align-items-center text-success-subtle column-gap-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-check-circle-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                />
+              </svg>
+              <p class="m-0">Stock Available</p>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-6 col-md-4 col-lg-5">
+              <button class="btn btn-vor-primary w-100 fw-medium">
+                Buy Now
+              </button>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-5">
               <button
-                class="btn btn-outline-primary col-4 d-flex align-items-center justify-content-center column-gap-2"
+                class="btn btn-outline-vor-lighter-400 text-white w-100 d-flex align-items-center justify-content-center column-gap-2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -234,794 +585,1953 @@
             </div>
           </div>
 
-          <!-- Description Section -->
-          <div class="mt-3">
-            <h4>Product Description</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-              nihil, harum, aspernatur totam sint quasi iste ipsa iure nesciunt
-              eum blanditiis aliquid natus cum dolores accusantium officia
-              explicabo sapiente quaerat.
-            </p>
-
-            <p>
-              1. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates at commodi illum, blanditiis.
-            </p>
-            <p>
-              2. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates at commodi illum, blanditiis.
-            </p>
-            <p>
-              3. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates at commodi illum, blanditiis.
-            </p>
-
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-              eos iste? Esse nulla soluta impedit pariatur officiis nihil harum
-              asperiores itaque nostrum, consequatur provident expedita fugiat
-              ipsum nesciunt voluptatum quas?
-            </p>
+          <!-- Shipping -->
+          <div class="py-3 border-top">
+            <h4>Shipping</h4>
+            <div class="d-flex align-items-center column-gap-2 mb-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-geo-alt"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                />
+                <path
+                  d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                />
+              </svg>
+              <p class="m-0">
+                Delivery destination - <strong>Jakarta Utara</strong>
+              </p>
+            </div>
+            <div class="d-flex align-items-start column-gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-truck"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"
+                />
+              </svg>
+              <div class="d-flex flex-column">
+                <p class="m-0 lh-1">
+                  Shipping fee start from Rp6.500 up to Rp12.000
+                </p>
+                <p class="m-0 text-vor-secondary">
+                  Estimation - Arrive in Oct 28
+                </p>
+              </div>
+            </div>
           </div>
 
-          <!-- How to use Section -->
-          <div>
-            <h4>How to Use</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus voluptatem praesentium esse perferendis repellendus
-              omnis quos id eos reiciendis? Maiores libero molestiae, excepturi
-              repellendus similique minima fugit eveniet tempora vero
-            </p>
+          <!-- Description & How to Use Section (Accordion) -->
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item border-top rounded-0">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button fs-4 fw-semibold px-0"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Description
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show">
+                <div class="accordion-body px-0">
+                  Experience unparalleled antioxidant protection with
+                  SKINCEUTICALS CE Ferulic. This revolutionary serum combines
+                  15% pure Vitamin C (L-Ascorbic Acid), 1% Vitamin E (Alpha
+                  Tocopherol), and 0.5% Ferulic Acid to shield your skin against
+                  environmental damage caused by free radicals, UV rays, and
+                  pollution.
+                  <br />
+                  <br />
+                  The powerful blend not only prevents premature aging but also
+                  improves the appearance of fine lines, wrinkles, and dark
+                  spots. With its lightweight, fast-absorbing formula, your skin
+                  feels smoother, brighter, and visibly rejuvenated. Perfect for
+                  all skin types, CE Ferulic is your ultimate ally in achieving
+                  radiant, youthful skin.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border-top">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fw-semibold fs-4 px-0"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  How to Use
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body px-0">
+                  Begin with a clean, dry face. Use a gentle cleanser to remove
+                  dirt and oil.
+                  <br />
+                  In the morning, dispense 4-5 drops of CE Ferulic onto your
+                  fingertips. Gently press and smooth the serum over your face,
+                  neck, and chest.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Review Section -->
-      <div class="border-top border-2 mt-3 p-4">
-        <div class="row gx-3">
-          <!-- Rating stats -->
-          <div class="col-5 d-flex flex-column row-gap-2 align-items-center">
-            <h4>Product Rating</h4>
-            <div class="d-flex align-items-center column-gap-2 text-primary">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="42"
-                height="42"
-                fill="currentColor"
-                class="bi bi-star-fill text-warning"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                />
-              </svg>
-              <span class="fs-4 text-black"
-                >4.7<span class="text-primary">/5.0</span></span
-              >
-            </div>
-            <div class="fs-6">Total 612 reviews</div>
-            <!-- Stars -->
-            <div
-              class="row w-100 gx-2 align-items-center justify-content-center"
-            >
-              <span
-                class="col-2 d-flex justify-content-evenly align-items-center"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-star-fill text-warning"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  /></svg
-                >5.0
-              </span>
-              <div class="col-8">
-                <div
-                  class="progress row gx-0 w-100"
-                  role="progressbar"
-                  aria-label="Basic example"
-                  aria-valuenow="75"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div class="progress-bar col-8 progress-bar-striped"></div>
-                </div>
-              </div>
-              <span class="col-2 text-center">408</span>
-            </div>
+      <!-- Content -->
+      <div class="pt-4">
+        <div class="row">
+          <div class="py-5">
+            <h2 class="pb-4 mb-4 border-bottom border-vor-lighter-400">
+              Related Products
+            </h2>
+            <div class="custom-scrollbar related-products">
+              <div class="row row-gap-4 flex-nowrap flex-lg-wrap pb-4">
+                <div class="col-9 col-md-6 col-lg-4">
+                  <div class="rounded-2 p-3 bg-vor-dark hover-brighter">
+                    <div class="w-100 position-relative d-flex mb-3">
+                      <div class="p-2 new-arrival img-container">
+                        <img
+                          src="../assets/img/new-arrivals-1.png"
+                          class="card-img-top d-block mx-auto"
+                          alt="New Arrival"
+                        />
+                      </div>
 
-            <div
-              class="row w-100 gx-2 align-items-center justify-content-center"
-            >
-              <span
-                class="col-2 d-flex justify-content-evenly align-items-center"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-star-fill text-warning"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  /></svg
-                >4.0
-              </span>
-              <div class="col-8">
-                <div
-                  class="progress row gx-0 w-100"
-                  role="progressbar"
-                  aria-label="Basic example"
-                  aria-valuenow="75"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div class="progress-bar col-3 progress-bar-striped"></div>
-                </div>
-              </div>
-              <span class="col-2 text-center">153</span>
-            </div>
+                      <!-- Strecthed Link -->
+                      <a href="#" class="stretched-link"></a>
 
-            <div
-              class="row w-100 gx-2 align-items-center justify-content-center"
-            >
-              <span
-                class="col-2 d-flex justify-content-evenly align-items-center"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-star-fill text-warning"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  /></svg
-                >3.0
-              </span>
-              <div class="col-8">
-                <div
-                  class="progress row gx-0 w-100"
-                  role="progressbar"
-                  aria-label="Basic example"
-                  aria-valuenow="75"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div class="progress-bar col-1 progress-bar-striped"></div>
-                </div>
-              </div>
-              <span class="col-2 text-center">51</span>
-            </div>
+                      <div class="d-flex p-2 align-items-center rounded-end">
+                        <div class="w-100">
+                          <div
+                            class="d-flex align-items-center column-gap-2 mb-1"
+                          >
+                            <span class="fs-7 fw-medium">4.9</span>
+                            <div
+                              class="d-flex align-items-center column-gap-1 text-vor-primary"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                            </div>
+                            <span class="text-secondary fs-7">(18)</span>
+                          </div>
 
-            <div
-              class="row w-100 gx-2 align-items-center justify-content-center"
-            >
-              <span
-                class="col-2 d-flex justify-content-evenly align-items-center"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-star-fill text-warning"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  /></svg
-                >2.0
-              </span>
-              <div class="col-8">
-                <div
-                  class="progress row gx-0 w-100"
-                  role="progressbar"
-                  aria-label="Basic example"
-                  aria-valuenow="75"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <!-- <div class="progress-bar col-1 progress-bar-striped"></div> -->
-                </div>
-              </div>
-              <span class="col-2 text-center">0</span>
-            </div>
+                          <h6
+                            class="card-title mb-2 d-block text-truncate pe-2"
+                          >
+                            <span class="loosen">Skinceuticals - </span
+                            ><span class="fw-light text-vor-light"
+                              >C E Ferulic</span
+                            >
+                          </h6>
 
-            <div
-              class="row w-100 gx-2 align-items-center justify-content-center"
-            >
-              <span
-                class="col-2 d-flex justify-content-evenly align-items-center"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-star-fill text-warning"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                  /></svg
-                >1.0
-              </span>
-              <div class="col-8">
-                <div
-                  class="progress row gx-0 w-100"
-                  role="progressbar"
-                  aria-label="Basic example"
-                  aria-valuenow="75"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <!-- <div class="progress-bar col-1 progress-bar-striped"></div> -->
+                          <div
+                            class="d-flex align-items-center justify-content-between"
+                          >
+                            <p class="fw-medium m-0">Rp3.608.100</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn btn-outline-vor-lighter-400 text-white w-100 d-flex align-items-center justify-content-center column-gap-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-bag-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"
+                        />
+                      </svg>
+                      Add to Bag
+                    </button>
+                  </div>
+                </div>
+
+                <div class="col-9 col-md-6 col-lg-4">
+                  <div class="rounded-2 p-3 bg-vor-dark hover-brighter">
+                    <div class="w-100 position-relative d-flex mb-3">
+                      <div class="p-2 new-arrival img-container">
+                        <img
+                          src="../assets/img/new-arrivals-1.png"
+                          class="card-img-top d-block mx-auto"
+                          alt="New Arrival"
+                        />
+                      </div>
+
+                      <!-- Strecthed Link -->
+                      <a href="#" class="stretched-link"></a>
+
+                      <div class="d-flex p-2 align-items-center rounded-end">
+                        <div class="w-100">
+                          <div
+                            class="d-flex align-items-center column-gap-2 mb-1"
+                          >
+                            <span class="fs-7 fw-medium">4.9</span>
+                            <div
+                              class="d-flex align-items-center column-gap-1 text-vor-primary"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                            </div>
+                            <span class="text-secondary fs-7">(18)</span>
+                          </div>
+
+                          <h6
+                            class="card-title mb-2 d-block text-truncate pe-2"
+                          >
+                            <span class="loosen">Skinceuticals - </span
+                            ><span class="fw-light text-vor-light"
+                              >C E Ferulic</span
+                            >
+                          </h6>
+
+                          <div
+                            class="d-flex align-items-center justify-content-between"
+                          >
+                            <p class="fw-medium m-0">Rp3.608.100</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn btn-outline-vor-lighter-400 text-white w-100 d-flex align-items-center justify-content-center column-gap-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-bag-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"
+                        />
+                      </svg>
+                      Add to Bag
+                    </button>
+                  </div>
+                </div>
+
+                <div class="col-9 col-md-6 col-lg-4">
+                  <div class="rounded-2 p-3 bg-vor-dark hover-brighter">
+                    <div class="w-100 position-relative d-flex mb-3">
+                      <div class="p-2 new-arrival img-container">
+                        <img
+                          src="../assets/img/new-arrivals-1.png"
+                          class="card-img-top d-block mx-auto"
+                          alt="New Arrival"
+                        />
+                      </div>
+
+                      <!-- Strecthed Link -->
+                      <a href="#" class="stretched-link"></a>
+
+                      <div class="d-flex p-2 align-items-center rounded-end">
+                        <div class="w-100">
+                          <div
+                            class="d-flex align-items-center column-gap-2 mb-1"
+                          >
+                            <span class="fs-7 fw-medium">4.9</span>
+                            <div
+                              class="d-flex align-items-center column-gap-1 text-vor-primary"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                            </div>
+                            <span class="text-secondary fs-7">(18)</span>
+                          </div>
+
+                          <h6
+                            class="card-title mb-2 d-block text-truncate pe-2"
+                          >
+                            <span class="loosen">Skinceuticals - </span
+                            ><span class="fw-light text-vor-light"
+                              >C E Ferulic</span
+                            >
+                          </h6>
+
+                          <div
+                            class="d-flex align-items-center justify-content-between"
+                          >
+                            <p class="fw-medium m-0">Rp3.608.100</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn btn-outline-vor-lighter-400 text-white w-100 d-flex align-items-center justify-content-center column-gap-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-bag-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"
+                        />
+                      </svg>
+                      Add to Bag
+                    </button>
+                  </div>
+                </div>
+
+                <div class="col-9 col-md-6 col-lg-4">
+                  <div class="rounded-2 p-3 bg-vor-dark hover-brighter">
+                    <div class="w-100 position-relative d-flex mb-3">
+                      <div class="p-2 new-arrival img-container">
+                        <img
+                          src="../assets/img/new-arrivals-1.png"
+                          class="card-img-top d-block mx-auto"
+                          alt="New Arrival"
+                        />
+                      </div>
+
+                      <!-- Strecthed Link -->
+                      <a href="#" class="stretched-link"></a>
+
+                      <div class="d-flex p-2 align-items-center rounded-end">
+                        <div class="w-100">
+                          <div
+                            class="d-flex align-items-center column-gap-2 mb-1"
+                          >
+                            <span class="fs-7 fw-medium">4.9</span>
+                            <div
+                              class="d-flex align-items-center column-gap-1 text-vor-primary"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                            </div>
+                            <span class="text-secondary fs-7">(18)</span>
+                          </div>
+
+                          <h6
+                            class="card-title mb-2 d-block text-truncate pe-2"
+                          >
+                            <span class="loosen">Skinceuticals - </span
+                            ><span class="fw-light text-vor-light"
+                              >C E Ferulic</span
+                            >
+                          </h6>
+
+                          <div
+                            class="d-flex align-items-center justify-content-between"
+                          >
+                            <p class="fw-medium m-0">Rp3.608.100</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn btn-outline-vor-lighter-400 text-white w-100 d-flex align-items-center justify-content-center column-gap-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-bag-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"
+                        />
+                      </svg>
+                      Add to Bag
+                    </button>
+                  </div>
+                </div>
+
+                <div class="col-9 col-md-6 col-lg-4">
+                  <div class="rounded-2 p-3 bg-vor-dark hover-brighter">
+                    <div class="w-100 position-relative d-flex mb-3">
+                      <div class="p-2 new-arrival img-container">
+                        <img
+                          src="../assets/img/new-arrivals-1.png"
+                          class="card-img-top d-block mx-auto"
+                          alt="New Arrival"
+                        />
+                      </div>
+
+                      <!-- Strecthed Link -->
+                      <a href="#" class="stretched-link"></a>
+
+                      <div class="d-flex p-2 align-items-center rounded-end">
+                        <div class="w-100">
+                          <div
+                            class="d-flex align-items-center column-gap-2 mb-1"
+                          >
+                            <span class="fs-7 fw-medium">4.9</span>
+                            <div
+                              class="d-flex align-items-center column-gap-1 text-vor-primary"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                fill="currentColor"
+                                class="bi bi-star-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                  fill="url(#linGrad_1)"
+                                />
+                              </svg>
+                            </div>
+                            <span class="text-secondary fs-7">(18)</span>
+                          </div>
+
+                          <h6
+                            class="card-title mb-2 d-block text-truncate pe-2"
+                          >
+                            <span class="loosen">Skinceuticals - </span
+                            ><span class="fw-light text-vor-light"
+                              >C E Ferulic</span
+                            >
+                          </h6>
+
+                          <div
+                            class="d-flex align-items-center justify-content-between"
+                          >
+                            <p class="fw-medium m-0">Rp3.608.100</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn btn-outline-vor-lighter-400 text-white w-100 d-flex align-items-center justify-content-center column-gap-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-bag-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"
+                        />
+                      </svg>
+                      Add to Bag
+                    </button>
+                  </div>
                 </div>
               </div>
-              <span class="col-2 text-center">0</span>
             </div>
           </div>
 
-          <!-- Content -->
-          <div class="col-7">
-            <!-- Review Header -->
-            <div class="d-flex justify-content-between">
-              <h5>Reviews (500+)</h5>
-              <div class="d-flex align-items-center column-gap-3">
-                <span>Sort By</span>
-                <div class="dropdown">
-                  <button
-                    class="btn btn-white border dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Latest
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item bg-primary text-white" href="#"
-                        >Latest</a
-                      >
-                    </li>
-                    <li><a class="dropdown-item" href="#">Oldest</a></li>
-                  </ul>
+          <div>
+            <h2 class="pb-4 mb-4 border-bottom border-vor-lighter-400">
+              Reviews
+            </h2>
+
+            <!-- Rating stats -->
+            <div class="d-flex flex-column row-gap-3 mb-5">
+              <div class="d-flex align-items-start justify-content-between">
+                <div class="mb-3">
+                  <div class="d-flex align-items-start column-gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="52"
+                      height="52"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#starsGradient)"
+                      />
+                    </svg>
+                    <div>
+                      <div>
+                        <span class="fs-4 lh-1 fw-medium"
+                          >4.7 <span class="fs-5 fw-normal">of</span> 5.0</span
+                        >
+                      </div>
+                      <div class="fs-6 lh-1 text-center text-vor-lighter-600">
+                        Based on 612 reviews
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="dropdown">
-                  <button
-                    class="btn btn-white border dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+                <button
+                  class="btn btn-outline-vor-lighter-400 text-white d-flex align-items-center justify-content-between column-gap-2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-pencil-fill"
+                    viewBox="0 0 16 16"
                   >
-                    Rating
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="#">Highest Rating 123 123 123</a>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Lowest Rating</a></li>
-                  </ul>
+                    <path
+                      d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.5.5 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11z"
+                    />
+                  </svg>
+                  Write a review
+                </button>
+              </div>
+
+              <!-- Stars -->
+              <div class="row gx-3 align-items-center justify-content-center">
+                <span
+                  class="col d-flex column-gap-2 align-items-center justify-content-end"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star-fill text-warning"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                      fill="url(#linGrad_1)"
+                    />
+                  </svg>
+                  5.0
+                </span>
+                <div class="col-8 col-lg-10">
+                  <div
+                    class="progress w-100"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar col-8 progress-bar rounded-pill main-gradient-bg"
+                    ></div>
+                  </div>
                 </div>
+                <span class="col">408</span>
+              </div>
+
+              <div class="row gx-3 align-items-center justify-content-center">
+                <span
+                  class="col d-flex column-gap-2 align-items-center justify-content-end"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star-fill text-warning"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                      fill="url(#linGrad_1)"
+                    />
+                  </svg>
+                  5.0
+                </span>
+                <div class="col-8 col-lg-10">
+                  <div
+                    class="progress w-100"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar col-8 progress-bar rounded-pill main-gradient-bg"
+                    ></div>
+                  </div>
+                </div>
+                <span class="col">408</span>
+              </div>
+
+              <div class="row gx-3 align-items-center justify-content-center">
+                <span
+                  class="col d-flex column-gap-2 align-items-center justify-content-end"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star-fill text-warning"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                      fill="url(#linGrad_1)"
+                    />
+                  </svg>
+                  5.0
+                </span>
+                <div class="col-8 col-lg-10">
+                  <div
+                    class="progress w-100"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar col-8 progress-bar rounded-pill main-gradient-bg"
+                    ></div>
+                  </div>
+                </div>
+                <span class="col">408</span>
+              </div>
+
+              <div class="row gx-3 align-items-center justify-content-center">
+                <span
+                  class="col d-flex column-gap-2 align-items-center justify-content-end"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star-fill text-warning"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                      fill="var(--bs-warning)"
+                    />
+                  </svg>
+                  5.0
+                </span>
+                <div class="col-8 col-lg-10">
+                  <div
+                    class="progress w-100"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar col-8 progress-bar rounded-pill main-gradient-bg"
+                    ></div>
+                  </div>
+                </div>
+                <span class="col">408</span>
+              </div>
+
+              <div class="row gx-3 align-items-center justify-content-center">
+                <span
+                  class="col d-flex column-gap-2 align-items-center justify-content-end"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star-fill text-warning"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                      fill="var(--bs-warning)"
+                    />
+                  </svg>
+                  5.0
+                </span>
+                <div class="col-8 col-lg-10">
+                  <div
+                    class="progress w-100"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar col-8 progress-bar rounded-pill"
+                      style="
+                        background: linear-gradient(
+                          to right,
+                          var(--bs-orange),
+                          var(--bs-warning)
+                        );
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <span class="col">408</span>
               </div>
             </div>
 
-            <!-- Review Text -->
-            <div class="mt-4">
-              <div class="border-bottom px-2 mb-3">
-                <div
-                  class="d-flex justify-content-between align-items-center mb-3"
-                >
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <img
-                      src="../assets/img/user-profile-dummy.jpg"
-                      alt="..."
-                      width="41px"
-                      height="41px"
-                      class="rounded-circle"
-                    />
-                    <div class="ms-3 d-flex align-items-center column-gap-3">
-                      <span class="fw-medium">Caca marica</span>
-                      <span>&#x2022;</span>
-                      <div class="d-flex column-gap-1 align-items-center pe-3">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-star-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                          />
-                        </svg>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-star-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                          />
-                        </svg>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-star-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                          />
-                        </svg>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-star-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                          />
-                        </svg>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-star-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                          />
-                        </svg>
-                        <span class="ms-2">(5.0)</span>
-                      </div>
-                    </div>
-                  </div>
-                  <span class="text-secondary">5 months ago</span>
-                </div>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Maxime, perspiciatis eaque et corporis ratione minima
-                  architecto sunt quia nemo vero quos quidem blanditiis earum.
-                  Expedita eum quisquam quibusdam exercitationem eveniet!
-                </p>
-
-                <div class="d-flex justify-content-between my-3">
-                  <div class="d-flex align-items-center text-primary">
-                    <button
-                      class="border-0 d-flex align-items-center bg-transparent text-primary"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-hand-thumbs-up"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2 2 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a10 10 0 0 0-.443.05 9.4 9.4 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a9 9 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.2 2.2 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.9.9 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"
-                        />
-                      </svg>
-                    </button>
-                    <span class="ms-3">Helpful (12)</span>
-                  </div>
-                  <div>
-                    <div class="dropdown">
-                      <button
-                        class="bg-transparent border-0"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-three-dots-vertical"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"
-                          />
-                        </svg>
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a class="dropdown-item" href="#">Report Review</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="border-bottom px-2 mb-3">
-                <div
-                  class="d-flex justify-content-between align-items-center mb-3"
-                >
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <img
-                      src="../assets/img/user-profile-dummy.jpg"
-                      alt="..."
-                      width="58px"
-                      height="58px"
-                      class="rounded-circle"
-                    />
-                    <div class="ms-3 d-flex align-items-center column-gap-3">
-                      <span class="fw-medium">Caca marica</span>
-                      <span>&#x2022;</span>
-                      <div class="d-flex column-gap-1 align-items-center pe-3">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-star-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                          />
-                        </svg>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-star-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                          />
-                        </svg>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-star-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                          />
-                        </svg>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-star-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                          />
-                        </svg>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-star-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                          />
-                        </svg>
-                        <span class="ms-2">(5.0)</span>
-                      </div>
-                    </div>
-                  </div>
-                  <span class="text-secondary">5 months ago</span>
-                </div>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Maxime, perspiciatis eaque et corporis ratione minima
-                  architecto sunt quia nemo vero quos quidem blanditiis earum.
-                  Expedita eum quisquam quibusdam exercitationem eveniet!
-                </p>
-
-                <div class="d-flex justify-content-between my-3">
-                  <div class="d-flex align-items-center text-primary">
-                    <button
-                      class="border-0 d-flex align-items-center bg-transparent text-primary"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-hand-thumbs-up"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2 2 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a10 10 0 0 0-.443.05 9.4 9.4 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a9 9 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.2 2.2 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.9.9 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"
-                        />
-                      </svg>
-                    </button>
-                    <span class="ms-3">Helpful (12)</span>
-                  </div>
-                  <div>
-                    <div class="dropdown">
-                      <button
-                        class="bg-transparent border-0"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-three-dots-vertical"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"
-                          />
-                        </svg>
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a class="dropdown-item" href="#">Report Review</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="border-bottom px-2 mb-3">
-                <div
-                  class="d-flex justify-content-between align-items-center mb-3"
-                >
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <img
-                      src="../assets/img/user-profile-dummy.jpg"
-                      alt="..."
-                      width="58px"
-                      height="58px"
-                      class="rounded-circle"
-                    />
-                    <div class="ms-3 d-flex align-items-center column-gap-3">
-                      <span class="fw-medium">Caca marica</span>
-                      <span>&#x2022;</span>
-                      <div class="d-flex column-gap-1 align-items-center pe-3">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-star-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                          />
-                        </svg>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-star-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                          />
-                        </svg>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-star-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                          />
-                        </svg>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-star-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                          />
-                        </svg>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-star-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                          />
-                        </svg>
-                        <span class="ms-2">(5.0)</span>
-                      </div>
-                    </div>
-                  </div>
-                  <span class="text-secondary">5 months ago</span>
-                </div>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Maxime, perspiciatis eaque et corporis ratione minima
-                  architecto sunt quia nemo vero quos quidem blanditiis earum.
-                  Expedita eum quisquam quibusdam exercitationem eveniet!
-                </p>
-
-                <div class="d-flex justify-content-between my-3">
-                  <div class="d-flex align-items-center text-primary">
-                    <button
-                      class="border-0 d-flex align-items-center bg-transparent text-primary"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-hand-thumbs-up"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2 2 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a10 10 0 0 0-.443.05 9.4 9.4 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a9 9 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.2 2.2 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.9.9 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"
-                        />
-                      </svg>
-                    </button>
-                    <span class="ms-3">Helpful (12)</span>
-                  </div>
-                  <div>
-                    <div class="dropdown">
-                      <button
-                        class="bg-transparent border-0"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          class="bi bi-three-dots-vertical"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"
-                          />
-                        </svg>
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a class="dropdown-item" href="#">Report Review</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            <!-- Reviews-->
             <div>
-              <button class="btn btn-outline-primary d-block mx-auto">
-                View more
-              </button>
+              <!-- Review Header -->
+              <div class="d-flex align-items-end justify-content-between pb-3">
+                <p class="m-0">Showing 1 to 5 out of 612 Reviews</p>
+                <div class="d-flex align-items-center column-gap-3">
+                  <span>Sort By</span>
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-white border dropdown-toggle"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Latest
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item bg-primary text-white" href="#"
+                          >Latest</a
+                        >
+                      </li>
+                      <li><a class="dropdown-item" href="#">Oldest</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review Contatiner -->
+              <div class="rounded-3 bg-vor-lighter-100 p-4">
+                <div class="mb-5">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <img
+                        src="../assets/img/user-profile-dummy.jpg"
+                        alt="..."
+                        width="41px"
+                        height="41px"
+                        class="rounded-circle"
+                      />
+                      <div class="ms-3 d-flex align-items-center column-gap-3">
+                        <span class="fw-medium">Caca marica</span>
+                        <span>&#x2022;</span>
+                        <div
+                          class="d-flex column-gap-1 align-items-center pe-3"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                          <span class="ms-2">(5.0)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="text-secondary">5 months ago</span>
+                  </div>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Maxime, perspiciatis eaque et corporis ratione minima
+                    architecto sunt quia nemo vero quos quidem blanditiis earum.
+                    Expedita eum quisquam quibusdam exercitationem eveniet!
+                  </p>
+
+                  <div class="d-flex justify-content-between my-3">
+                    <div class="d-flex column-gap-2 align-items-center">
+                      <button
+                        class="btn btn-vor-lighter-300 rounded-2 d-flex column-gap-2 align-items-center text-vor-light"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-hand-thumbs-up"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2 2 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a10 10 0 0 0-.443.05 9.4 9.4 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a9 9 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.2 2.2 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.9.9 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"
+                            fill="var(--bs-success-subtle)"
+                          />
+                        </svg>
+                        12
+                      </button>
+
+                      <button
+                        class="btn btn-vor-lighter-300 rounded-2 d-flex column-gap-2 align-items-center text-vor-light"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-hand-thumbs-down text-danger"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8.864 15.674c-.956.24-1.843-.484-1.908-1.42-.072-1.05-.23-2.015-.428-2.59-.125-.36-.479-1.012-1.04-1.638-.557-.624-1.282-1.179-2.131-1.41C2.685 8.432 2 7.85 2 7V3c0-.845.682-1.464 1.448-1.546 1.07-.113 1.564-.415 2.068-.723l.048-.029c.272-.166.578-.349.97-.484C6.931.08 7.395 0 8 0h3.5c.937 0 1.599.478 1.934 1.064.164.287.254.607.254.913 0 .152-.023.312-.077.464.201.262.38.577.488.9.11.33.172.762.004 1.15.069.13.12.268.159.403.077.27.113.567.113.856s-.036.586-.113.856c-.035.12-.08.244-.138.363.394.571.418 1.2.234 1.733-.206.592-.682 1.1-1.2 1.272-.847.283-1.803.276-2.516.211a10 10 0 0 1-.443-.05 9.36 9.36 0 0 1-.062 4.51c-.138.508-.55.848-1.012.964zM11.5 1H8c-.51 0-.863.068-1.14.163-.281.097-.506.229-.776.393l-.04.025c-.555.338-1.198.73-2.49.868-.333.035-.554.29-.554.55V7c0 .255.226.543.62.65 1.095.3 1.977.997 2.614 1.709.635.71 1.064 1.475 1.238 1.977.243.7.407 1.768.482 2.85.025.362.36.595.667.518l.262-.065c.16-.04.258-.144.288-.255a8.34 8.34 0 0 0-.145-4.726.5.5 0 0 1 .595-.643h.003l.014.004.058.013a9 9 0 0 0 1.036.157c.663.06 1.457.054 2.11-.163.175-.059.45-.301.57-.651.107-.308.087-.67-.266-1.021L12.793 7l.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581s-.027-.414-.075-.581c-.05-.174-.111-.273-.154-.315l-.353-.354.353-.354c.047-.047.109-.176.005-.488a2.2 2.2 0 0 0-.505-.804l-.353-.354.353-.354c.006-.005.041-.05.041-.17a.9.9 0 0 0-.121-.415C12.4 1.272 12.063 1 11.5 1"
+                          />
+                        </svg>
+                        0
+                      </button>
+                    </div>
+                    <div>
+                      <div class="dropdown">
+                        <button
+                          class="bg-transparent border-0"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-three-dots-vertical"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"
+                            />
+                          </svg>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="#">Report Review</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-5">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <img
+                        src="../assets/img/user-profile-dummy.jpg"
+                        alt="..."
+                        width="41px"
+                        height="41px"
+                        class="rounded-circle"
+                      />
+                      <div class="ms-3 d-flex align-items-center column-gap-3">
+                        <span class="fw-medium">Caca marica</span>
+                        <span>&#x2022;</span>
+                        <div
+                          class="d-flex column-gap-1 align-items-center pe-3"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                          <span class="ms-2">(5.0)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="text-secondary">5 months ago</span>
+                  </div>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Maxime, perspiciatis eaque et corporis ratione minima
+                    architecto sunt quia nemo vero quos quidem blanditiis earum.
+                    Expedita eum quisquam quibusdam exercitationem eveniet!
+                  </p>
+
+                  <div class="d-flex justify-content-between my-3">
+                    <div class="d-flex column-gap-2 align-items-center">
+                      <button
+                        class="btn btn-vor-lighter-300 rounded-2 d-flex column-gap-2 align-items-center text-vor-light"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-hand-thumbs-up"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2 2 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a10 10 0 0 0-.443.05 9.4 9.4 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a9 9 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.2 2.2 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.9.9 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"
+                            fill="var(--bs-success-subtle)"
+                          />
+                        </svg>
+                        12
+                      </button>
+
+                      <button
+                        class="btn btn-vor-lighter-300 rounded-2 d-flex column-gap-2 align-items-center text-vor-light"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-hand-thumbs-down text-danger"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8.864 15.674c-.956.24-1.843-.484-1.908-1.42-.072-1.05-.23-2.015-.428-2.59-.125-.36-.479-1.012-1.04-1.638-.557-.624-1.282-1.179-2.131-1.41C2.685 8.432 2 7.85 2 7V3c0-.845.682-1.464 1.448-1.546 1.07-.113 1.564-.415 2.068-.723l.048-.029c.272-.166.578-.349.97-.484C6.931.08 7.395 0 8 0h3.5c.937 0 1.599.478 1.934 1.064.164.287.254.607.254.913 0 .152-.023.312-.077.464.201.262.38.577.488.9.11.33.172.762.004 1.15.069.13.12.268.159.403.077.27.113.567.113.856s-.036.586-.113.856c-.035.12-.08.244-.138.363.394.571.418 1.2.234 1.733-.206.592-.682 1.1-1.2 1.272-.847.283-1.803.276-2.516.211a10 10 0 0 1-.443-.05 9.36 9.36 0 0 1-.062 4.51c-.138.508-.55.848-1.012.964zM11.5 1H8c-.51 0-.863.068-1.14.163-.281.097-.506.229-.776.393l-.04.025c-.555.338-1.198.73-2.49.868-.333.035-.554.29-.554.55V7c0 .255.226.543.62.65 1.095.3 1.977.997 2.614 1.709.635.71 1.064 1.475 1.238 1.977.243.7.407 1.768.482 2.85.025.362.36.595.667.518l.262-.065c.16-.04.258-.144.288-.255a8.34 8.34 0 0 0-.145-4.726.5.5 0 0 1 .595-.643h.003l.014.004.058.013a9 9 0 0 0 1.036.157c.663.06 1.457.054 2.11-.163.175-.059.45-.301.57-.651.107-.308.087-.67-.266-1.021L12.793 7l.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581s-.027-.414-.075-.581c-.05-.174-.111-.273-.154-.315l-.353-.354.353-.354c.047-.047.109-.176.005-.488a2.2 2.2 0 0 0-.505-.804l-.353-.354.353-.354c.006-.005.041-.05.041-.17a.9.9 0 0 0-.121-.415C12.4 1.272 12.063 1 11.5 1"
+                          />
+                        </svg>
+                        0
+                      </button>
+                    </div>
+                    <div>
+                      <div class="dropdown">
+                        <button
+                          class="bg-transparent border-0"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-three-dots-vertical"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"
+                            />
+                          </svg>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="#">Report Review</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-5">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-3"
+                  >
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <img
+                        src="../assets/img/user-profile-dummy.jpg"
+                        alt="..."
+                        width="41px"
+                        height="41px"
+                        class="rounded-circle"
+                      />
+                      <div class="ms-3 d-flex align-items-center column-gap-3">
+                        <span class="fw-medium">Caca marica</span>
+                        <span>&#x2022;</span>
+                        <div
+                          class="d-flex column-gap-1 align-items-center pe-3"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                          <span class="ms-2">(5.0)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="text-secondary">5 months ago</span>
+                  </div>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Maxime, perspiciatis eaque et corporis ratione minima
+                    architecto sunt quia nemo vero quos quidem blanditiis earum.
+                    Expedita eum quisquam quibusdam exercitationem eveniet!
+                  </p>
+
+                  <div class="d-flex justify-content-between my-3">
+                    <div class="d-flex column-gap-2 align-items-center">
+                      <button
+                        class="btn btn-vor-lighter-300 rounded-2 d-flex column-gap-2 align-items-center text-vor-light"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-hand-thumbs-up"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2 2 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a10 10 0 0 0-.443.05 9.4 9.4 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a9 9 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.2 2.2 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.9.9 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"
+                            fill="var(--bs-success-subtle)"
+                          />
+                        </svg>
+                        12
+                      </button>
+
+                      <button
+                        class="btn btn-vor-lighter-300 rounded-2 d-flex column-gap-2 align-items-center text-vor-light"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-hand-thumbs-down text-danger"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8.864 15.674c-.956.24-1.843-.484-1.908-1.42-.072-1.05-.23-2.015-.428-2.59-.125-.36-.479-1.012-1.04-1.638-.557-.624-1.282-1.179-2.131-1.41C2.685 8.432 2 7.85 2 7V3c0-.845.682-1.464 1.448-1.546 1.07-.113 1.564-.415 2.068-.723l.048-.029c.272-.166.578-.349.97-.484C6.931.08 7.395 0 8 0h3.5c.937 0 1.599.478 1.934 1.064.164.287.254.607.254.913 0 .152-.023.312-.077.464.201.262.38.577.488.9.11.33.172.762.004 1.15.069.13.12.268.159.403.077.27.113.567.113.856s-.036.586-.113.856c-.035.12-.08.244-.138.363.394.571.418 1.2.234 1.733-.206.592-.682 1.1-1.2 1.272-.847.283-1.803.276-2.516.211a10 10 0 0 1-.443-.05 9.36 9.36 0 0 1-.062 4.51c-.138.508-.55.848-1.012.964zM11.5 1H8c-.51 0-.863.068-1.14.163-.281.097-.506.229-.776.393l-.04.025c-.555.338-1.198.73-2.49.868-.333.035-.554.29-.554.55V7c0 .255.226.543.62.65 1.095.3 1.977.997 2.614 1.709.635.71 1.064 1.475 1.238 1.977.243.7.407 1.768.482 2.85.025.362.36.595.667.518l.262-.065c.16-.04.258-.144.288-.255a8.34 8.34 0 0 0-.145-4.726.5.5 0 0 1 .595-.643h.003l.014.004.058.013a9 9 0 0 0 1.036.157c.663.06 1.457.054 2.11-.163.175-.059.45-.301.57-.651.107-.308.087-.67-.266-1.021L12.793 7l.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581s-.027-.414-.075-.581c-.05-.174-.111-.273-.154-.315l-.353-.354.353-.354c.047-.047.109-.176.005-.488a2.2 2.2 0 0 0-.505-.804l-.353-.354.353-.354c.006-.005.041-.05.041-.17a.9.9 0 0 0-.121-.415C12.4 1.272 12.063 1 11.5 1"
+                          />
+                        </svg>
+                        0
+                      </button>
+                    </div>
+                    <div>
+                      <div class="dropdown">
+                        <button
+                          class="bg-transparent border-0"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-three-dots-vertical"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"
+                            />
+                          </svg>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="#">Report Review</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <button
+                    class="btn btn-outline-vor-lighter-400 text-white d-block mx-auto"
+                  >
+                    View more
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Recommendation Product -->
-      <div class="mt-3 px-4">
+      <div class="mt-3">
         <h4>Recommended for you</h4>
-        <div class="row row-cols-4 g-4">
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+        <div class="row row-gap-4">
+          <div class="col-6 col-lg-4 col-xl-3">
+            <div
+              class="card position-relative border-vor-lighter-300 bg-vor-darker-100 hover-shadow hover-brighter"
+            >
+              <a
+                href="productDetail.html"
+                class="d-flex justify-content-center overflow-hidden z-2 position-relative rounded-top py-3 bg-vor-dark"
+              >
+                <img
+                  src="../assets/img/best-sellers-1.png"
+                  class="card-img-top w-50"
+                  alt="..."
+                />
+              </a>
+
+              <!-- Stretched Link -->
+              <a href="productDetail.html" class="stretched-link"></a>
+
+              <div class="card-body rounded-bottom">
+                <div class="d-flex align-items-center column-gap-2 mb-2">
+                  <span class="fs-7 fw-medium">4.8</span>
+                  <div class="d-flex align-items-center column-gap-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#starsGradient)"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#starsGradient)"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#linGrad_1)"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#linGrad_1)"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-half"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"
+                        fill="url(#linGrad_1)"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-vor-lighter-600 fs-7">(1k+)</span>
+                </div>
+
+                <h6 class="card-title mb-0 loosen-text">Bangn Body</h6>
+                <p class="card-text mb-2 text-vor-lighter-600 fs-7">
+                  Hydrating Facial Cleanser
                 </p>
+
+                <div class="d-flex align-items-center">
+                  <p class="fw-medium m-0">Rp828.100</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+
+          <div class="col-6 col-lg-4 col-xl-3">
+            <div
+              class="card position-relative border-vor-lighter-300 bg-vor-darker-100 hover-shadow hover-brighter"
+            >
+              <a
+                href="productDetail.html"
+                class="d-flex justify-content-center overflow-hidden z-2 position-relative rounded-top py-3 bg-vor-dark"
+              >
+                <img
+                  src="../assets/img/best-sellers-2.png"
+                  class="card-img-top w-50"
+                  alt="..."
+                />
+              </a>
+
+              <!-- Stretched Link -->
+              <a href="productDetail.html" class="stretched-link"></a>
+
+              <div class="card-body rounded-bottom">
+                <div class="d-flex align-items-center column-gap-2 mb-2">
+                  <span class="fs-7 fw-medium">4.4</span>
+                  <div class="d-flex align-items-center column-gap-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#linGrad_1)"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#linGrad_1)"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#linGrad_1)"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#linGrad_1)"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="var(--bs-vor-lighter-600)"
+                      class="bi bi-star"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-vor-lighter-600 fs-7">(2k+)</span>
+                </div>
+
+                <h6 class="card-title mb-0 loosen-text">Kiehl's</h6>
+                <p class="card-text mb-2 text-vor-lighter-600 fs-7">
+                  Ultra Facial Toner 250ml
                 </p>
+
+                <div class="d-flex align-items-center">
+                  <p class="fw-medium m-0">Rp684.700</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+
+          <div class="col-6 col-lg-4 col-xl-3">
+            <div
+              class="card position-relative border-vor-lighter-300 bg-vor-darker-100 hover-shadow hover-brighter"
+            >
+              <a
+                href="productDetail.html"
+                class="d-flex justify-content-center overflow-hidden z-2 position-relative rounded-top py-3 bg-vor-dark"
+              >
+                <img
+                  src="../assets/img/best-sellers-3.png"
+                  class="card-img-top w-50"
+                  alt="..."
+                />
+              </a>
+
+              <!-- Stretched Link -->
+              <a href="productDetail.html" class="stretched-link"></a>
+
+              <div class="card-body rounded-bottom">
+                <div class="d-flex align-items-center column-gap-2 mb-2">
+                  <span class="fs-7 fw-medium">4.3</span>
+                  <div class="d-flex align-items-center column-gap-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#linGrad_1)"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#linGrad_1)"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#linGrad_1)"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#linGrad_1)"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="var(--bs-vor-lighter-600)"
+                      class="bi bi-star"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-vor-lighter-600 fs-7">(2.5k+)</span>
+                </div>
+
+                <h6 class="card-title mb-0 loosen-text">Paula's Choice</h6>
+                <p class="card-text mb-2 text-vor-lighter-600 fs-7">
+                  2% BHA Liquid Exfoliant
                 </p>
+
+                <div class="d-flex align-items-center">
+                  <p class="fw-medium m-0">Rp668.800</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+
+          <div class="col-6 col-lg-4 col-xl-3">
+            <div
+              class="card position-relative border-vor-lighter-300 bg-vor-darker-100 hover-shadow hover-brighter"
+            >
+              <a
+                href="productDetail.html"
+                class="d-flex justify-content-center overflow-hidden z-2 position-relative rounded-top py-3 bg-vor-dark"
+              >
+                <img
+                  src="../assets/img/best-sellers-4.png"
+                  class="card-img-top w-50"
+                  alt="..."
+                />
+              </a>
+
+              <!-- Stretched Link -->
+              <a href="productDetail.html" class="stretched-link"></a>
+
+              <div class="card-body rounded-bottom">
+                <div class="d-flex align-items-center column-gap-2 mb-2">
+                  <span class="fs-7 fw-medium">4.7</span>
+                  <div class="d-flex align-items-center column-gap-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#linGrad_1)"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#linGrad_1)"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#linGrad_1)"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                        fill="url(#linGrad_1)"
+                      />
+                    </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-half"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"
+                        fill="url(#linGrad_1)"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-vor-lighter-600 fs-7">(1.5k+)</span>
+                </div>
+
+                <h6 class="card-title mb-0 loosen-text">Kora Organics</h6>
+                <p class="card-text mb-2 text-vor-lighter-600 fs-7">
+                  Berry Bright Eye Cream
                 </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
+
+                <div class="d-flex align-items-center">
+                  <p class="fw-medium m-0">Rp1.146.600</p>
+                </div>
               </div>
             </div>
           </div>
@@ -1029,6 +2539,370 @@
       </div>
     </div>
 
-    <script src="../src/bootstrap.bundle.min.js"></script>
+    <!-- Footer Section -->
+    <footer
+      class="border-top border-vor-lighter-300 position-relative overflow-hidden bg-vor-darker-100"
+    >
+      <!-- Top Section -->
+      <div
+        class="py-3 d-flex justify-content-center align-items-center border-bottom border-vor-lighter-300 bg-vor-dark"
+      >
+        <div
+          class="d-flex flex-column flex-md-row column-gap-4 align-items-center"
+        >
+          <a class="fs-1 text-decoration-none text-white aboreto" href="#"
+            >V<span class="logo gradient-font">O</span>RSKINS</a
+          >
+
+          <div class="d-flex column-gap-4 align-items-center">
+            <span class="fs-6">Best E-Commerce for skincare and bodycare</span>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="currentColor"
+              class="bi bi-patch-check text-vor-primary-subtle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0"
+              />
+              <path
+                d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="container pt-5 pb-4 px-4">
+        <div
+          class="row row-gap-4 justify-content-center justify-content-md-between"
+        >
+          <div class="col-9 col-md-6 col-lg-2">
+            <p
+              class="fw-medium d-flex justify-content-center justify-content-md-start"
+            >
+              Information
+            </p>
+            <div
+              class="d-flex flex-column align-items-center align-items-md-start"
+              data-bs-theme="dark"
+            >
+              <a
+                href="#"
+                class="text-decoration-none text-vor-primary-subtle-hover"
+                >About Vorskins</a
+              >
+              <a
+                href="#"
+                class="text-decoration-none text-vor-primary-subtle-hover"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-decoration-none text-vor-primary-subtle-hover"
+                >Terms and Condition</a
+              >
+              <a
+                href="#"
+                class="text-decoration-none text-vor-primary-subtle-hover"
+                >Shipping</a
+              >
+              <a
+                href="#"
+                class="text-decoration-none text-vor-primary-subtle-hover"
+                >How to Pay</a
+              >
+              <a
+                href="#"
+                class="text-decoration-none text-vor-primary-subtle-hover"
+                >Help Center</a
+              >
+            </div>
+          </div>
+
+          <div class="col-6 col-md-5 col-lg-3">
+            <p
+              class="fw-medium d-flex justify-content-center justify-content-md-start"
+            >
+              Payment Option
+            </p>
+            <!-- payment container -->
+            <div class="row row-gap-2 gx-2 w-100">
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/BANK_BRI_logo.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/logo-BCA-biru.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/Logo BMRI-03.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/Gopay_logo.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/Logo_ovo_purple.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/SPayLater_Logo_Horizontal_Orange.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/Logo-Indomaret.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/Logo_Alfamart.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/Visa_Brandmark_Blue_RGB_2021.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/ma_symbol_opt_63_1x.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/Apple_Pay_Logo.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <!-- Adjust Size -->
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex justify-content-center align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/Google_Pay_Logo.png"
+                    alt="BRI"
+                    width="80%"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-9 col-md-6 col-lg-3">
+            <p
+              class="fw-medium d-flex justify-content-center justify-content-md-start"
+            >
+              Follow Us
+            </p>
+            <div
+              class="d-flex align-items-center justify-content-center justify-content-md-start column-gap-4 follow-us"
+            >
+              <a href="#" class="d-flex align-items-center link-vor-secondary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-instagram"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="d-flex align-items-center link-vor-secondary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-twitter-x"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="d-flex align-items-center link-vor-secondary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-facebook"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="d-flex align-items-center link-vor-secondary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-pinterest"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="d-flex align-items-center link-vor-secondary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-linkedin"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="col-9 col-md-5 col-lg-2 d-flex flex-column align-items-center d-md-block"
+          >
+            <p class="fw-medium">Contact Us</p>
+            <span>Email</span>
+            <p class="text-vor-lighter-600">vorskins@gmail.com</p>
+            <span>WhatsApp</span>
+            <p class="text-vor-lighter-600">+62 887 9999 24</p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="d-flex flex-column align-items-center justify-content-center p-4"
+      >
+        <p class="fw-medium mb-0 py-2">DOWNLOAD OUR APP</p>
+        <div class="d-flex column-gap-2">
+          <a href="#" class="link-underline link-underline-opacity-0">
+            <img
+              src="../assets/store-button/Download_on_the_App_Store_Badge.png"
+              alt="..."
+              height="32px"
+            />
+          </a>
+          <a href="#" class="link-underline link-underline-opacity-0">
+            <img
+              src="../assets/store-button/Google_Play_Store_badge_EN.png"
+              alt="..."
+              height="32px"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="p-3 mx-5 text-center fs-8 text-vor-light border-top border-vor-lighter-300"
+      >
+        2022 - 2023 &copy PT. Vorskins Indonesia. All Rights Reserved.
+      </div>
+    </footer>
+
+    <script src="../src/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/js/generalScript.js"></script>
   </body>
 </html>

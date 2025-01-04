@@ -3,95 +3,255 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../src/main.css" />
-    <link rel="stylesheet" href="../src/styling.css">
+    <title>Subscription - Vorskins</title>
+    <link rel="stylesheet" href="../src/css/main.css" />
+    <link rel="stylesheet" href="../src/css/styling.css" />
   </head>
-  <body>
-    <!-- first navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary pt-4 pb-2">
-      <div class="container-fluid mx-4">
-        <div class="d-flex w-50">
-          <a class="navbar-brand" href="#">VORSKINS</a>
-          <form role="search" class="ms-5 flex-grow-1">
+  <body data-bs-theme="dark">
+    <!-- first + second navbar -->
+    <nav
+      class="navbar navbar-expand-lg sticky-top flex-column px-3 bg-vor-darker-300"
+    >
+      <div class="container-fluid px-3">
+        <div class="d-flex justify-content-between align-items-center gap-3">
+          <button
+            class="navbar-toggler p-1 border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasSidebar"
+            aria-controls="offcanvasSidebar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="fs-1 text-decoration-none text-white aboreto" href="#"
+            >V<span class="logo gradient-font">O</span>RSKINS</a
+          >
+        </div>
+
+        <div class="row w-50 justify-content-center d-none d-lg-flex">
+          <form role="search" class="position-relative col-8 nav-search-bar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="21"
+              fill="currentColor"
+              class="bi bi-search position-absolute"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              />
+            </svg>
+
             <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
+              class="form-control px-5 py-2 bg-vor-lighter-100 main-search-form"
+              placeholder="What are you looking for?"
               aria-label="Search"
             />
+
+            <button class="position-absolute clear-search-btn" type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-x"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+                />
+              </svg>
+            </button>
           </form>
         </div>
 
-        <div class="d-flex gap-4 align-items-center">
-          <div class="d-flex align-items-center gap-1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              class="bi bi-person-fill"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
-              />
-            </svg>
-            <a
-              href="#"
-              class="primary-link"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              >Log In</a
-            >
-            <span> / </span>
-            <a
-              href="#"
-              class="primary-link"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              >Register</a
-            >
-          </div>
+        <div class="d-flex gap-3 align-items-center">
+          <div class="d-flex gap-3">
+            <div class="d-none d-sm-flex align-items-center gap-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-person-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                />
+              </svg>
+              <a
+                href="#"
+                class="text-white text-decoration-none fs-8"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Log in</a
+              >
+              <span class="fs-7"> / </span>
+              <a
+                href="#"
+                class="text-white text-decoration-none fs-8"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Register</a
+              >
+            </div>
 
-          <div class="d-flex align-items-center gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              fill="currentColor"
-              class="bi bi-bag-fill"
-              viewBox="0 0 16 16"
+            <div
+              class="d-flex position-relative align-items-center gap-1 bag-dropdown-toggler"
             >
-              <path
-                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"
-              />
-            </svg>
-            <a href="#" class="primary-link">Bag</a>
+              <a
+                href="#"
+                class="text-white text-decoration-none py-4 d-flex align-items-center gap-2 fs-8"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-bag-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"
+                  />
+                </svg>
+                Bag
+              </a>
+
+              <!-- Bag Dropdown -->
+              <div
+                class="position-absolute rounded-3 p-4 bg-vor-darker-200 shadow-sm bag-dropdown"
+              >
+                <!-- Header -->
+                <h4 class="mb-4">Shopping bag</h4>
+
+                <!-- Bag Item -->
+                <div class="bag-items-container pe-3">
+                  <div class="d-flex column-gap-2 align-items-center py-3">
+                    <div class="w-25 d-flex justify-content-center">
+                      <img
+                        src="../assets/img/new-arrivals-6.png"
+                        alt="Cart Item 1"
+                        width="75%"
+                      />
+                    </div>
+
+                    <div class="flex-grow-1">
+                      <p class="mb-2 lh-1">
+                        <span class="fw-medium">Kiehl's</span> - Ultra Facial
+                        Cream
+                      </p>
+                      <p class="fw-medium mb-3 lh-1"></p>
+                      <div class="row justify-content-between">
+                        <div class="d-flex col-6">
+                          <button
+                            type="button"
+                            class="btn btn-outline-vor-lighter-400 p-2 d-flex justify-content-center rounded-2 rounded-end-0 border-end-0 text-white"
+                            onclick="subItem()"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-dash"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"
+                              />
+                            </svg>
+                          </button>
+
+                          <span
+                            class="d-flex flex-grow-1 justify-content-center align-items-center p-2 lh-1 border-top border-bottom border-vor-lighter-400"
+                          ></span>
+
+                          <button
+                            type="button"
+                            class="btn btn-outline-vor-lighter-400 p-2 d-flex justify-content-center rounded-2 rounded-start-0 border-start-0 text-white"
+                            onclick="addItem()"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-plus"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                        <a
+                          href="#"
+                          class="col-2 d-flex justify-content-center align-items-center px-2 text-decoration-none remove-icon-btn"
+                          title="Remove"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-trash3 z-2 trash-can-animation"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Subtotal -->
+                <div
+                  class="mb-3 pt-3 d-flex justify-content-between align-items-center"
+                >
+                  <span>Subtotal:</span>
+                  <span class="fw-medium">Rp456.456</span>
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-flex column-gap-3">
+                  <button
+                    class="btn btn-outline-vor-lighter-400 text-white py-2 rounded-2 fw-medium w-50"
+                  >
+                    View Bag
+                  </button>
+                  <button
+                    class="py-2 btn btn-light rounded-2 fw-semibold w-50"
+                  >
+                    Checkout
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </nav>
 
-    <!-- second navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-      <div class="container-fluid">
-        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <ul class="navbar-nav">
+      <!-- second navbar -->
+      <div class="container-fluid px-3">
+        <div class="collapse navbar-collapse justify-content-center mt-3">
+          <ul class="navbar-nav column-gap-5 text-center">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a
+                class="nav-link link-vor-primary-subtle"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutUs.html">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="products.html">Products</a>
@@ -100,105 +260,81 @@
               <a class="nav-link" href="#">Promotion</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="aboutUs.html">About us</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="subscribe.html">Subsribe</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
+            <form class="flex-grow-1 d-block d-lg-none">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
           </ul>
         </div>
       </div>
     </nav>
 
     <!-- Subscription Form -->
-    <div class="d-flex justify-content-center subscription-container text-white position-relative overflow-hidden">
-      <div class="w-50 p-4 z-2">
-        <h1 class="text-center">Want to stay in the glow?</h1>
-        <h3 class="text-center">Subscribe to Us!</h3>
-        <!-- <p class="text-center">Get exclusive updates, skincare tips, and special offers.</p> -->
-        <div class="row mb-3">
-          <div class="col">
-            <label for="inputName" class="form-label">Name</label>
-            <input
-              type="text"
-              class="form-control subscription-form"
-              id="inputName"
-              placeholder="Your Name"
-            />
-          </div>
-          <div class="col">
-            <label for="inputEmail" class="form-label">Email</label>
-            <input
-              type="text"
-              class="form-control subscription-form"
-              id="inputEmail"
-              placeholder="Your Email Address"
-            />
+    <div class="container px-4 pt-5 position-relative">
+      <div
+        class="row p-5 rounded-4 bg-vor-darker-200 overflow-hidden position-relative"
+      >
+        <div class="mb-4 z-3">
+          <div class="text-center">
+            <div class="fs-1 lh-1 fw-semibold mb-3">
+              Want to stay in the glow?
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-11 col-md-9 col-lg-7 fs-5 lh-1 text-vor-secondary">Sign up to our news letter, and get exclusive updates, skincare tips, and special offers.</div>
+            </div>
           </div>
         </div>
-        <div class="mb-3">
-          <label for="inputNumber" class="form-label">Phone Number</label>
-          <input
-            type="text"
-            class="form-control subscription-form"
-            id="inputNumber"
-            placeholder="Phone Number"
-          />
-        </div>
-        <div class="row mb-3">
-          <div class="col-3">Preferences</div>
-          <div class="col-3">
-            <!-- <div> -->
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="checkPreferences1"
-            />
-            <label class="form-check-label" for="checkPreferences1">
-              Skin care
-            </label>
-            <!-- </div> -->
-          </div>
-          <div class="col-6">
-            <!-- <div> -->
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="checkPreferences2"
-            />
-            <label class="form-check-label" for="checkPreferences2">
-              Body care
-            </label>
-            <!-- </div> -->
-          </div>
-        </div>
-        <div class="mb-3">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="agreeToSubscribeCheckBox"
-          />
-          <label class="form-check-label" for="agreeToSubscribeCheckBox">
-            Agree to Recieve Newsletter
-          </label>
-        </div>
-        <div class="row gx-0 w-100">
-          <button class="col-4 btn btn-primary">Subscribe</button>
-        </div>
-      </div>
+        <div class="z-3">
+          <form class="row row-gap-3 justify-content-center">
+            <div class="col-9 col-md-8 col-lg-6">
+              <div class="mb-2">
+                <input
+                  type="email"
+                  class="form-control subscription-form"
+                  id="inputEmail4"
+                  placeholder="Enter your email"
+                />
+              </div>
 
-      <!-- <div class="gradient-element position-absolute">
-        <svg height="200" width="600" xmlns="http://www.w3.org/2000/svg">
-          <ellipse rx="300" ry="100" cx="300" cy="100" />
-        </svg>
-      </div> -->
+              <div class="mb-3">
+                <select id="inputState" class="form-select subscription-form">
+                  <option hidden selected>Preferences</option>
+                  <option value="bodycare">Body care</option>
+                  <option value="skincare">Skin care</option>
+                </select>
+              </div>
+
+              <div class="form-check mb-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="gridCheck"
+                />
+                <label class="form-check-label" for="gridCheck">
+                  Agree to receive newsletter
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-light fw-semibold px-3">
+                Notify me
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="glow-element bottom"></div>
+        <!-- <div class="glow-element top-right d-none d-md-block"></div> -->
+      </div>
     </div>
 
     <!-- Benefits -->
-    <div class="p-4">
+    <div class="container mt-5 px-4">
       <div class="row justify-content-evenly">
         <div
           class="col-3 d-flex align-items-center justify-content-center column-gap-3 p-3"
@@ -280,5 +416,371 @@
         </div>
       </div>
     </div>
+
+    <!-- Footer Section -->
+    <footer
+      class="border-top border-vor-lighter-300 position-relative overflow-hidden bg-vor-darker-100"
+    >
+      <!-- Top Section -->
+      <div
+        class="py-3 d-flex justify-content-center align-items-center border-bottom border-vor-lighter-300 bg-vor-dark"
+      >
+        <div
+          class="d-flex flex-column flex-md-row column-gap-4 align-items-center"
+        >
+          <a class="fs-1 text-decoration-none text-white aboreto" href="#"
+            >V<span class="logo gradient-font">O</span>RSKINS</a
+          >
+
+          <div class="d-flex column-gap-4 align-items-center">
+            <span class="fs-6">Best E-Commerce for skincare and bodycare</span>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="currentColor"
+              class="bi bi-patch-check text-vor-primary-subtle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0"
+              />
+              <path
+                d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="container pt-5 pb-4 px-4">
+        <div
+          class="row row-gap-4 justify-content-center justify-content-md-between"
+        >
+          <div class="col-9 col-md-6 col-lg-2">
+            <p
+              class="fw-medium d-flex justify-content-center justify-content-md-start"
+            >
+              Information
+            </p>
+            <div
+              class="d-flex flex-column align-items-center align-items-md-start"
+              data-bs-theme="dark"
+            >
+              <a
+                href="#"
+                class="text-decoration-none text-vor-primary-subtle-hover"
+                >About Vorskins</a
+              >
+              <a
+                href="#"
+                class="text-decoration-none text-vor-primary-subtle-hover"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-decoration-none text-vor-primary-subtle-hover"
+                >Terms and Condition</a
+              >
+              <a
+                href="#"
+                class="text-decoration-none text-vor-primary-subtle-hover"
+                >Shipping</a
+              >
+              <a
+                href="#"
+                class="text-decoration-none text-vor-primary-subtle-hover"
+                >How to Pay</a
+              >
+              <a
+                href="#"
+                class="text-decoration-none text-vor-primary-subtle-hover"
+                >Help Center</a
+              >
+            </div>
+          </div>
+
+          <div class="col-6 col-md-5 col-lg-3">
+            <p
+              class="fw-medium d-flex justify-content-center justify-content-md-start"
+            >
+              Payment Option
+            </p>
+            <!-- payment container -->
+            <div class="row row-gap-2 gx-2 w-100">
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/BANK_BRI_logo.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/logo-BCA-biru.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/Logo BMRI-03.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/Gopay_logo.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/Logo_ovo_purple.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/SPayLater_Logo_Horizontal_Orange.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/Logo-Indomaret.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/Logo_Alfamart.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/Visa_Brandmark_Blue_RGB_2021.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/ma_symbol_opt_63_1x.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/Apple_Pay_Logo.png"
+                    alt="BRI"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+
+              <!-- Adjust Size -->
+              <div class="col-3 d-flex">
+                <div
+                  class="w-100 d-flex justify-content-center align-items-center bg-white rounded-1 p-1 img-darker"
+                >
+                  <img
+                    src="../assets/payment-logo/Google_Pay_Logo.png"
+                    alt="BRI"
+                    width="80%"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-9 col-md-6 col-lg-3">
+            <p
+              class="fw-medium d-flex justify-content-center justify-content-md-start"
+            >
+              Follow Us
+            </p>
+            <div
+              class="d-flex align-items-center justify-content-center justify-content-md-start column-gap-4 follow-us"
+            >
+              <a href="#" class="d-flex align-items-center link-vor-secondary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-instagram"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="d-flex align-items-center link-vor-secondary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-twitter-x"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="d-flex align-items-center link-vor-secondary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-facebook"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="d-flex align-items-center link-vor-secondary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-pinterest"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="d-flex align-items-center link-vor-secondary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-linkedin"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="col-9 col-md-5 col-lg-2 d-flex flex-column align-items-center d-md-block"
+          >
+            <p class="fw-medium">Contact Us</p>
+            <span>Email</span>
+            <p class="text-vor-lighter-600">vorskins@gmail.com</p>
+            <span>WhatsApp</span>
+            <p class="text-vor-lighter-600">+62 887 9999 24</p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="d-flex flex-column align-items-center justify-content-center p-4"
+      >
+        <p class="fw-medium mb-0 py-2">DOWNLOAD OUR APP</p>
+        <div class="d-flex column-gap-2">
+          <a href="#" class="link-underline link-underline-opacity-0">
+            <img
+              src="../assets/store-button/Download_on_the_App_Store_Badge.png"
+              alt="..."
+              height="32px"
+            />
+          </a>
+          <a href="#" class="link-underline link-underline-opacity-0">
+            <img
+              src="../assets/store-button/Google_Play_Store_badge_EN.png"
+              alt="..."
+              height="32px"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="p-3 mx-5 text-center fs-8 text-vor-light border-top border-vor-lighter-300"
+      >
+        2022 - 2023 &copy PT. Vorskins Indonesia. All Rights Reserved.
+      </div>
+    </footer>
+
+    <script src="../src/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/js/generalScript.js"></script>
   </body>
 </html>
