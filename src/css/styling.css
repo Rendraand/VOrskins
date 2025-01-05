@@ -86,7 +86,7 @@ html::-webkit-scrollbar-button:single-button:increment {
     width: 400px;
     right: -40%;
     top: 80%;
-    z-index: 1025;
+    z-index: 1500;
     display: none;
     animation: bagScaleIn 0.3s ease;
 }

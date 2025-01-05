@@ -244,12 +244,7 @@
         <div class="collapse navbar-collapse justify-content-center mt-3">
           <ul class="navbar-nav column-gap-5 text-center">
             <li class="nav-item">
-              <a
-                class="nav-link link-vor-primary-subtle"
-                aria-current="page"
-                href="#"
-                >Home</a
-              >
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="aboutUs.html">About</a>
@@ -258,7 +253,7 @@
               <a class="nav-link" href="products.html">Products</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Promotion</a>
+              <a class="nav-link" href="promotions.html">Promotion</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="subscribe.html">Subsribe</a>
@@ -296,21 +291,40 @@
       <div class="offcanvas-body pt-0">
         <ul class="navbar-nav row-gap-2 mb-3">
           <li class="nav-item ps-3">
-            <a class="nav-link active" aria-current="page" href="index.html"
+            <a
+              class="nav-link text-vor-primary-subtle-hover"
+              aria-current="page"
+              href="index.html"
               >Home</a
             >
           </li>
           <li class="nav-item ps-3">
-            <a class="nav-link" href="products.html">Products</a>
+            <a
+              class="nav-link text-vor-primary-subtle-hover"
+              href="aboutUs.html"
+              >About us</a
+            >
           </li>
           <li class="nav-item ps-3">
-            <a class="nav-link" href="#">Promotion</a>
+            <a
+              class="nav-link text-vor-primary-subtle-hover"
+              href="products.html"
+              >Products</a
+            >
           </li>
           <li class="nav-item ps-3">
-            <a class="nav-link" href="aboutUs.html">About us</a>
+            <a
+              class="nav-link text-vor-primary-subtle-hover"
+              href="promotions.html"
+              >Promotion</a
+            >
           </li>
           <li class="nav-item ps-3">
-            <a class="nav-link" href="subscribe.html">Subsribe</a>
+            <a
+              class="nav-link text-vor-primary-subtle-hover"
+              href="subscribe.html"
+              >Subsribe</a
+            >
           </li>
         </ul>
         <form
@@ -354,7 +368,7 @@
         </form>
         <div class="mt-4 d-flex d-sm-none column-gap-2">
           <button
-            class="w-50 d-flex justify-content-center align-items-center column-gap-1 btn btn-outline-vor-lighter-400 text-white rounded-pill fw-medium"
+            class="w-50 d-flex justify-content-center align-items-center column-gap-1 btn btn-outline-vor-lighter-400 text-white rounded-3 fw-medium"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -371,7 +385,7 @@
             Login
           </button>
           <button
-            class="w-50 btn btn-vor-primary rounded-pill fw-medium hover-darker"
+            class="w-50 btn btn-vor-primary rounded-3 fw-medium hover-darker"
           >
             Register
           </button>
@@ -384,7 +398,7 @@
       <!-- Product Display -->
       <div class="row justify-content-center">
         <!-- Image -->
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-6 py-4">
           <div class="d-flex">
             <img
               src="../assets/img/new-arrivals-1.png"
@@ -402,23 +416,23 @@
 
           <div class="d-flex mb-3">
             <p class="fw-medium fs-3 m-0 pe-3 border-end border-vor-secondary">
-              Rp187.000
+              Rp3.608.100
             </p>
             <div
               class="d-flex align-items-center column-gap-1 px-3 border-end border-vor-secondary"
             >
-              <span class="me-2">4.7</span>
+              <span class="me-2">4.9</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
-                fill="var(--bs-warning)"
+                fill="currentColor"
                 class="bi bi-star-fill"
                 viewBox="0 0 16 16"
               >
                 <defs>
                   <linearGradient
-                    id="#starsGradient"
+                    id="starsGradient"
                     x1="0%"
                     y1="0%"
                     x2="100%"
@@ -430,6 +444,7 @@
                 </defs>
                 <path
                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                  fill="url(#starsGradient)"
                 />
               </svg>
               <svg
@@ -454,13 +469,14 @@
               >
                 <path
                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                  fill="url(#starsGradient)"
                 />
               </svg>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
-                fill="currentColor"
+                fill="url(#starsGradient)"
                 class="bi bi-star-fill"
                 viewBox="0 0 16 16"
               >
@@ -473,16 +489,17 @@
                 width="16"
                 height="16"
                 fill="currentColor"
-                class="bi bi-star-fill"
+                class="bi bi-star-half"
                 viewBox="0 0 16 16"
               >
                 <path
-                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                  d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"
+                  fill="url(#starsGradient)"
                 />
               </svg>
             </div>
             <span class="ms-3 align-self-center text-vor-secondary"
-              >500+ Reviews</span
+              >18 Reviews</span
             >
           </div>
 
@@ -696,7 +713,7 @@
       </div>
 
       <!-- Content -->
-      <div class="pt-4">
+      <div class="pt-4 pb-5">
         <div class="row">
           <div class="py-5">
             <h2 class="pb-4 mb-4 border-bottom border-vor-lighter-400">
@@ -737,7 +754,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -750,7 +767,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -763,7 +780,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -776,7 +793,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -789,7 +806,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                             </div>
@@ -838,7 +855,7 @@
                     <div class="w-100 position-relative d-flex mb-3">
                       <div class="p-2 new-arrival img-container">
                         <img
-                          src="../assets/img/new-arrivals-1.png"
+                          src="../assets/img/new-arrivals-2.png"
                           class="card-img-top d-block mx-auto"
                           alt="New Arrival"
                         />
@@ -852,7 +869,7 @@
                           <div
                             class="d-flex align-items-center column-gap-2 mb-1"
                           >
-                            <span class="fs-7 fw-medium">4.9</span>
+                            <span class="fs-7 fw-medium">4.5</span>
                             <div
                               class="d-flex align-items-center column-gap-1 text-vor-primary"
                             >
@@ -864,9 +881,27 @@
                                 class="bi bi-star-fill"
                                 viewBox="0 0 16 16"
                               >
+                                <defs>
+                                  <linearGradient
+                                    id="starsGradient"
+                                    x1="0%"
+                                    y1="0%"
+                                    x2="100%"
+                                    y2="100%"
+                                  >
+                                    <stop
+                                      offset="0%"
+                                      style="stop-color: var(--bs-orange)"
+                                    />
+                                    <stop
+                                      offset="100%"
+                                      style="stop-color: var(--bs-warning)"
+                                    />
+                                  </linearGradient>
+                                </defs>
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -879,7 +914,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -892,7 +927,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -905,7 +940,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -913,31 +948,31 @@
                                 width="14"
                                 height="14"
                                 fill="currentColor"
-                                class="bi bi-star-fill"
+                                class="bi bi-star-half"
                                 viewBox="0 0 16 16"
                               >
                                 <path
-                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                             </div>
-                            <span class="text-secondary fs-7">(18)</span>
+                            <span class="text-secondary fs-7">(37)</span>
                           </div>
 
                           <h6
                             class="card-title mb-2 d-block text-truncate pe-2"
                           >
-                            <span class="loosen">Skinceuticals - </span
+                            <span class="loosen">Sunday Riley - </span
                             ><span class="fw-light text-vor-light"
-                              >C E Ferulic</span
+                              >Auto Correct</span
                             >
                           </h6>
 
                           <div
                             class="d-flex align-items-center justify-content-between"
                           >
-                            <p class="fw-medium m-0">Rp3.608.100</p>
+                            <p class="fw-medium m-0">Rp1.052.000</p>
                           </div>
                         </div>
                       </div>
@@ -967,7 +1002,7 @@
                     <div class="w-100 position-relative d-flex mb-3">
                       <div class="p-2 new-arrival img-container">
                         <img
-                          src="../assets/img/new-arrivals-1.png"
+                          src="../assets/img/new-arrivals-3.png"
                           class="card-img-top d-block mx-auto"
                           alt="New Arrival"
                         />
@@ -981,7 +1016,7 @@
                           <div
                             class="d-flex align-items-center column-gap-2 mb-1"
                           >
-                            <span class="fs-7 fw-medium">4.9</span>
+                            <span class="fs-7 fw-medium">4.6</span>
                             <div
                               class="d-flex align-items-center column-gap-1 text-vor-primary"
                             >
@@ -993,9 +1028,27 @@
                                 class="bi bi-star-fill"
                                 viewBox="0 0 16 16"
                               >
+                                <defs>
+                                  <linearGradient
+                                    id="starsGradient"
+                                    x1="0%"
+                                    y1="0%"
+                                    x2="100%"
+                                    y2="100%"
+                                  >
+                                    <stop
+                                      offset="0%"
+                                      style="stop-color: var(--bs-orange)"
+                                    />
+                                    <stop
+                                      offset="100%"
+                                      style="stop-color: var(--bs-warning)"
+                                    />
+                                  </linearGradient>
+                                </defs>
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -1008,7 +1061,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -1021,7 +1074,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -1034,7 +1087,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -1042,31 +1095,31 @@
                                 width="14"
                                 height="14"
                                 fill="currentColor"
-                                class="bi bi-star-fill"
+                                class="bi bi-star-half"
                                 viewBox="0 0 16 16"
                               >
                                 <path
-                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                             </div>
-                            <span class="text-secondary fs-7">(18)</span>
+                            <span class="text-secondary fs-7">(48)</span>
                           </div>
 
                           <h6
                             class="card-title mb-2 d-block text-truncate pe-2"
                           >
-                            <span class="loosen">Skinceuticals - </span
+                            <span class="loosen">The Ordinary - </span
                             ><span class="fw-light text-vor-light"
-                              >C E Ferulic</span
+                              >Hyaluronic Acid</span
                             >
                           </h6>
 
                           <div
                             class="d-flex align-items-center justify-content-between"
                           >
-                            <p class="fw-medium m-0">Rp3.608.100</p>
+                            <p class="fw-medium m-0">Rp283.200</p>
                           </div>
                         </div>
                       </div>
@@ -1096,7 +1149,7 @@
                     <div class="w-100 position-relative d-flex mb-3">
                       <div class="p-2 new-arrival img-container">
                         <img
-                          src="../assets/img/new-arrivals-1.png"
+                          src="../assets/img/new-arrivals-4.png"
                           class="card-img-top d-block mx-auto"
                           alt="New Arrival"
                         />
@@ -1110,7 +1163,7 @@
                           <div
                             class="d-flex align-items-center column-gap-2 mb-1"
                           >
-                            <span class="fs-7 fw-medium">4.9</span>
+                            <span class="fs-7 fw-medium">4.7</span>
                             <div
                               class="d-flex align-items-center column-gap-1 text-vor-primary"
                             >
@@ -1122,9 +1175,27 @@
                                 class="bi bi-star-fill"
                                 viewBox="0 0 16 16"
                               >
+                                <defs>
+                                  <linearGradient
+                                    id="starsGradient"
+                                    x1="0%"
+                                    y1="0%"
+                                    x2="100%"
+                                    y2="100%"
+                                  >
+                                    <stop
+                                      offset="0%"
+                                      style="stop-color: var(--bs-orange)"
+                                    />
+                                    <stop
+                                      offset="100%"
+                                      style="stop-color: var(--bs-warning)"
+                                    />
+                                  </linearGradient>
+                                </defs>
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -1137,7 +1208,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -1150,7 +1221,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -1163,7 +1234,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -1171,31 +1242,31 @@
                                 width="14"
                                 height="14"
                                 fill="currentColor"
-                                class="bi bi-star-fill"
+                                class="bi bi-star-half"
                                 viewBox="0 0 16 16"
                               >
                                 <path
-                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                             </div>
-                            <span class="text-secondary fs-7">(18)</span>
+                            <span class="text-secondary fs-7">(95)</span>
                           </div>
 
                           <h6
                             class="card-title mb-2 d-block text-truncate pe-2"
                           >
-                            <span class="loosen">Skinceuticals - </span
+                            <span class="loosen">Go-To - </span
                             ><span class="fw-light text-vor-light"
-                              >C E Ferulic</span
+                              >Face Hero</span
                             >
                           </h6>
 
                           <div
                             class="d-flex align-items-center justify-content-between"
                           >
-                            <p class="fw-medium m-0">Rp3.608.100</p>
+                            <p class="fw-medium m-0">Rp728.300</p>
                           </div>
                         </div>
                       </div>
@@ -1225,7 +1296,7 @@
                     <div class="w-100 position-relative d-flex mb-3">
                       <div class="p-2 new-arrival img-container">
                         <img
-                          src="../assets/img/new-arrivals-1.png"
+                          src="../assets/img/new-arrivals-5.png"
                           class="card-img-top d-block mx-auto"
                           alt="New Arrival"
                         />
@@ -1251,9 +1322,27 @@
                                 class="bi bi-star-fill"
                                 viewBox="0 0 16 16"
                               >
+                                <defs>
+                                  <linearGradient
+                                    id="starsGradient"
+                                    x1="0%"
+                                    y1="0%"
+                                    x2="100%"
+                                    y2="100%"
+                                  >
+                                    <stop
+                                      offset="0%"
+                                      style="stop-color: var(--bs-orange)"
+                                    />
+                                    <stop
+                                      offset="100%"
+                                      style="stop-color: var(--bs-warning)"
+                                    />
+                                  </linearGradient>
+                                </defs>
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -1266,7 +1355,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -1279,7 +1368,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -1292,7 +1381,7 @@
                               >
                                 <path
                                   d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                               <svg
@@ -1300,31 +1389,31 @@
                                 width="14"
                                 height="14"
                                 fill="currentColor"
-                                class="bi bi-star-fill"
+                                class="bi bi-star-half"
                                 viewBox="0 0 16 16"
                               >
                                 <path
-                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                                  fill="url(#linGrad_1)"
+                                  d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"
+                                  fill="url(#starsGradient)"
                                 />
                               </svg>
                             </div>
-                            <span class="text-secondary fs-7">(18)</span>
+                            <span class="text-secondary fs-7">(101)</span>
                           </div>
 
                           <h6
                             class="card-title mb-2 d-block text-truncate pe-2"
                           >
-                            <span class="loosen">Skinceuticals - </span
+                            <span class="loosen">The Ordinary - </span
                             ><span class="fw-light text-vor-light"
-                              >C E Ferulic</span
+                              >Rose Hip Face Oil</span
                             >
                           </h6>
 
                           <div
                             class="d-flex align-items-center justify-content-between"
                           >
-                            <p class="fw-medium m-0">Rp3.608.100</p>
+                            <p class="fw-medium m-0">Rp176.400</p>
                           </div>
                         </div>
                       </div>
@@ -1378,11 +1467,11 @@
                     <div>
                       <div>
                         <span class="fs-4 lh-1 fw-medium"
-                          >4.7 <span class="fs-5 fw-normal">of</span> 5.0</span
+                          >4.9 <span class="fs-5 fw-normal">of</span> 5.0</span
                         >
                       </div>
                       <div class="fs-6 lh-1 text-center text-vor-lighter-600">
-                        Based on 612 reviews
+                        Based on 18 reviews
                       </div>
                     </div>
                   </div>
@@ -1407,9 +1496,11 @@
               </div>
 
               <!-- Stars -->
-              <div class="row gx-3 align-items-center justify-content-center">
+              <div
+                class="row gx-3 align-items-center justify-content-center px-3"
+              >
                 <span
-                  class="col d-flex column-gap-2 align-items-center justify-content-end"
+                  class="col d-flex column-gap-2 align-items-center justify-content-start"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1421,7 +1512,7 @@
                   >
                     <path
                       d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                      fill="url(#linGrad_1)"
+                      fill="url(#starsGradient)"
                     />
                   </svg>
                   5.0
@@ -1435,168 +1526,180 @@
                     aria-valuemax="100"
                   >
                     <div
-                      class="progress-bar col-8 progress-bar rounded-pill main-gradient-bg"
-                    ></div>
-                  </div>
-                </div>
-                <span class="col">408</span>
-              </div>
-
-              <div class="row gx-3 align-items-center justify-content-center">
-                <span
-                  class="col d-flex column-gap-2 align-items-center justify-content-end"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-star-fill text-warning"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                      fill="url(#linGrad_1)"
-                    />
-                  </svg>
-                  5.0
-                </span>
-                <div class="col-8 col-lg-10">
-                  <div
-                    class="progress w-100"
-                    role="progressbar"
-                    aria-label="Basic example"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    <div
-                      class="progress-bar col-8 progress-bar rounded-pill main-gradient-bg"
-                    ></div>
-                  </div>
-                </div>
-                <span class="col">408</span>
-              </div>
-
-              <div class="row gx-3 align-items-center justify-content-center">
-                <span
-                  class="col d-flex column-gap-2 align-items-center justify-content-end"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-star-fill text-warning"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                      fill="url(#linGrad_1)"
-                    />
-                  </svg>
-                  5.0
-                </span>
-                <div class="col-8 col-lg-10">
-                  <div
-                    class="progress w-100"
-                    role="progressbar"
-                    aria-label="Basic example"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    <div
-                      class="progress-bar col-8 progress-bar rounded-pill main-gradient-bg"
-                    ></div>
-                  </div>
-                </div>
-                <span class="col">408</span>
-              </div>
-
-              <div class="row gx-3 align-items-center justify-content-center">
-                <span
-                  class="col d-flex column-gap-2 align-items-center justify-content-end"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-star-fill text-warning"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                      fill="var(--bs-warning)"
-                    />
-                  </svg>
-                  5.0
-                </span>
-                <div class="col-8 col-lg-10">
-                  <div
-                    class="progress w-100"
-                    role="progressbar"
-                    aria-label="Basic example"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    <div
-                      class="progress-bar col-8 progress-bar rounded-pill main-gradient-bg"
-                    ></div>
-                  </div>
-                </div>
-                <span class="col">408</span>
-              </div>
-
-              <div class="row gx-3 align-items-center justify-content-center">
-                <span
-                  class="col d-flex column-gap-2 align-items-center justify-content-end"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-star-fill text-warning"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                      fill="var(--bs-warning)"
-                    />
-                  </svg>
-                  5.0
-                </span>
-                <div class="col-8 col-lg-10">
-                  <div
-                    class="progress w-100"
-                    role="progressbar"
-                    aria-label="Basic example"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    <div
-                      class="progress-bar col-8 progress-bar rounded-pill"
+                      class="progress-bar progress-bar rounded-pill"
                       style="
                         background: linear-gradient(
                           to right,
-                          var(--bs-orange),
-                          var(--bs-warning)
+                          var(--bs-warning) 45%,
+                          var(--bs-orange) 100%
                         );
+                        width: calc(17 / 18 * 100%);
                       "
                     ></div>
                   </div>
                 </div>
-                <span class="col">408</span>
+                <span class="col">17</span>
+              </div>
+
+              <div
+                class="row gx-3 align-items-center justify-content-center px-3"
+              >
+                <span
+                  class="col d-flex column-gap-2 align-items-center justify-content-start"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                      fill="url(#starsGradient)"
+                    />
+                  </svg>
+                  4.0
+                </span>
+                <div class="col-8 col-lg-10">
+                  <div
+                    class="progress w-100"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar progress-bar rounded-pill main-gradient-bg"
+                    ></div>
+                  </div>
+                </div>
+                <span class="col">0</span>
+              </div>
+
+              <div
+                class="row gx-3 align-items-center justify-content-center px-3"
+              >
+                <span
+                  class="col d-flex column-gap-2 align-items-center justify-content-start"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star-fill text-warning"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                      fill="url(#starsGradient)"
+                    />
+                  </svg>
+                  3.0
+                </span>
+                <div class="col-8 col-lg-10">
+                  <div
+                    class="progress w-100"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar progress-bar rounded-pill main-gradient-bg"
+                      style="
+                        background: linear-gradient(
+                          to right,
+                          var(--bs-warning) 45%,
+                          var(--bs-orange) 100%
+                        );
+                        width: calc(1 / 18 * 100%);
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <span class="col">1</span>
+              </div>
+
+              <div
+                class="row gx-3 align-items-center justify-content-center px-3"
+              >
+                <span
+                  class="col d-flex column-gap-2 align-items-center justify-content-start"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                      fill="url(#starsGradient)"
+                    />
+                  </svg>
+                  2.0
+                </span>
+                <div class="col-8 col-lg-10">
+                  <div
+                    class="progress w-100"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar progress-bar rounded-pill"></div>
+                  </div>
+                </div>
+                <span class="col">0</span>
+              </div>
+
+              <div
+                class="row gx-3 align-items-center justify-content-center px-3"
+              >
+                <span
+                  class="col d-flex column-gap-2 align-items-center justify-content-start"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                      fill="url(#starsGradient)"
+                    />
+                  </svg>
+                  1.0
+                </span>
+                <div class="col-8 col-lg-10">
+                  <div
+                    class="progress w-100"
+                    role="progressbar"
+                    aria-label="Basic example"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div class="progress-bar progress-bar rounded-pill"></div>
+                  </div>
+                </div>
+                <span class="col">0</span>
               </div>
             </div>
 
             <!-- Reviews-->
             <div>
               <!-- Review Header -->
-              <div class="d-flex align-items-end justify-content-between pb-3">
-                <p class="m-0">Showing 1 to 5 out of 612 Reviews</p>
+              <div class="d-flex align-items-end pb-3">
                 <div class="d-flex align-items-center column-gap-3">
-                  <span>Sort By</span>
+                  <span>Sort by:</span>
                   <div class="dropdown">
                     <button
                       class="btn btn-white border dropdown-toggle"
@@ -1622,24 +1725,24 @@
               <div class="rounded-3 bg-vor-lighter-100 p-4">
                 <div class="mb-5">
                   <div
-                    class="d-flex justify-content-between align-items-center mb-3"
+                    class="d-flex justify-content-between align-items-start mb-3"
                   >
                     <div
-                      class="d-flex justify-content-between align-items-center"
+                      class="d-flex justify-content-between align-items-center column-gap-3"
                     >
                       <img
-                        src="../assets/img/user-profile-dummy.jpg"
+                        src="../assets/img/profile-picutre-1.jpg"
                         alt="..."
                         width="41px"
                         height="41px"
                         class="rounded-circle"
                       />
-                      <div class="ms-3 d-flex align-items-center column-gap-3">
-                        <span class="fw-medium">Caca marica</span>
-                        <span>&#x2022;</span>
+                      <div>
+                        <span class="fw-medium">Sarah Viloid</span>
                         <div
                           class="d-flex column-gap-1 align-items-center pe-3"
                         >
+                          <span class="me-2 fw-medium">5.0</span>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
@@ -1650,6 +1753,7 @@
                           >
                             <path
                               d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                              fill="url(#starsGradient)"
                             />
                           </svg>
                           <svg
@@ -1662,6 +1766,7 @@
                           >
                             <path
                               d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                              fill="url(#starsGradient)"
                             />
                           </svg>
                           <svg
@@ -1674,6 +1779,7 @@
                           >
                             <path
                               d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                              fill="url(#starsGradient)"
                             />
                           </svg>
                           <svg
@@ -1686,6 +1792,7 @@
                           >
                             <path
                               d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                              fill="url(#starsGradient)"
                             />
                           </svg>
                           <svg
@@ -1698,19 +1805,23 @@
                           >
                             <path
                               d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                              fill="url(#starsGradient)"
                             />
                           </svg>
-                          <span class="ms-2">(5.0)</span>
                         </div>
                       </div>
                     </div>
                     <span class="text-secondary">5 months ago</span>
                   </div>
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Maxime, perspiciatis eaque et corporis ratione minima
-                    architecto sunt quia nemo vero quos quidem blanditiis earum.
-                    Expedita eum quisquam quibusdam exercitationem eveniet!
+                    I absolutely love the Skinceuticals C E Ferulic serum! It’s
+                    pricey, but it’s worth every cent. My skin has never looked
+                    so radiant and even-toned. After using it consistently for
+                    two months, my dark spots have faded, and I feel like it
+                    provides a protective shield against pollution. The smell
+                    isn’t the greatest, but you get used to it because the
+                    results are incredible. Definitely a holy grail product for
+                    me!
                   </p>
 
                   <div class="d-flex justify-content-between my-3">
@@ -1785,24 +1896,24 @@
 
                 <div class="mb-5">
                   <div
-                    class="d-flex justify-content-between align-items-center mb-3"
+                    class="d-flex justify-content-between align-items-start mb-3"
                   >
                     <div
-                      class="d-flex justify-content-between align-items-center"
+                      class="d-flex justify-content-between align-items-center column-gap-3"
                     >
                       <img
-                        src="../assets/img/user-profile-dummy.jpg"
+                        src="../assets/img/profile-picutre-2.jpg"
                         alt="..."
                         width="41px"
                         height="41px"
                         class="rounded-circle"
                       />
-                      <div class="ms-3 d-flex align-items-center column-gap-3">
-                        <span class="fw-medium">Caca marica</span>
-                        <span>&#x2022;</span>
+                      <div>
+                        <span class="fw-medium">Karen Nath</span>
                         <div
                           class="d-flex column-gap-1 align-items-center pe-3"
                         >
+                          <span class="me-2 fw-medium">5.0</span>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
@@ -1813,6 +1924,7 @@
                           >
                             <path
                               d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                              fill="url(#starsGradient)"
                             />
                           </svg>
                           <svg
@@ -1825,6 +1937,7 @@
                           >
                             <path
                               d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                              fill="url(#starsGradient)"
                             />
                           </svg>
                           <svg
@@ -1837,6 +1950,7 @@
                           >
                             <path
                               d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                              fill="url(#starsGradient)"
                             />
                           </svg>
                           <svg
@@ -1849,6 +1963,7 @@
                           >
                             <path
                               d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                              fill="url(#starsGradient)"
                             />
                           </svg>
                           <svg
@@ -1861,19 +1976,22 @@
                           >
                             <path
                               d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                              fill="url(#starsGradient)"
                             />
                           </svg>
-                          <span class="ms-2">(5.0)</span>
                         </div>
                       </div>
                     </div>
-                    <span class="text-secondary">5 months ago</span>
+                    <span class="text-secondary">2 months ago</span>
                   </div>
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Maxime, perspiciatis eaque et corporis ratione minima
-                    architecto sunt quia nemo vero quos quidem blanditiis earum.
-                    Expedita eum quisquam quibusdam exercitationem eveniet!
+                    This serum delivers amazing results, but it’s not without
+                    its flaws. My skin looks brighter and feels smoother, and
+                    I’ve noticed fewer breakouts since incorporating it into my
+                    routine. However, the smell is quite strong—almost
+                    metallic—and the price point is steep. I’m on the fence
+                    about repurchasing, but it’s definitely effective in
+                    combating dullness and fine lines.
                   </p>
 
                   <div class="d-flex justify-content-between my-3">
@@ -1894,7 +2012,7 @@
                             fill="var(--bs-success-subtle)"
                           />
                         </svg>
-                        12
+                        7
                       </button>
 
                       <button
@@ -1948,24 +2066,24 @@
 
                 <div class="mb-5">
                   <div
-                    class="d-flex justify-content-between align-items-center mb-3"
+                    class="d-flex justify-content-between align-items-start mb-3"
                   >
                     <div
-                      class="d-flex justify-content-between align-items-center"
+                      class="d-flex justify-content-between align-items-center column-gap-3"
                     >
                       <img
-                        src="../assets/img/user-profile-dummy.jpg"
+                        src="../assets/img/profile-picutre-3.jpg"
                         alt="..."
                         width="41px"
                         height="41px"
                         class="rounded-circle"
                       />
-                      <div class="ms-3 d-flex align-items-center column-gap-3">
-                        <span class="fw-medium">Caca marica</span>
-                        <span>&#x2022;</span>
+                      <div>
+                        <span class="fw-medium">Sophia Claren</span>
                         <div
                           class="d-flex column-gap-1 align-items-center pe-3"
                         >
+                          <span class="me-2 fw-medium">3.0</span>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
@@ -1976,6 +2094,7 @@
                           >
                             <path
                               d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                              fill="url(#starsGradient)"
                             />
                           </svg>
                           <svg
@@ -1988,6 +2107,7 @@
                           >
                             <path
                               d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                              fill="url(#starsGradient)"
                             />
                           </svg>
                           <svg
@@ -2000,43 +2120,47 @@
                           >
                             <path
                               d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                              fill="url(#starsGradient)"
                             />
                           </svg>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
                             height="16"
-                            fill="currentColor"
-                            class="bi bi-star-fill"
+                            fill="var(--bs-vor-secondary)"
+                            class="bi bi-star"
                             viewBox="0 0 16 16"
                           >
                             <path
-                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                              d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
                             />
                           </svg>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
                             height="16"
-                            fill="currentColor"
-                            class="bi bi-star-fill"
+                            fill="var(--bs-vor-secondary)"
+                            class="bi bi-star"
                             viewBox="0 0 16 16"
                           >
                             <path
-                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                              d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
                             />
                           </svg>
-                          <span class="ms-2">(5.0)</span>
                         </div>
                       </div>
                     </div>
-                    <span class="text-secondary">5 months ago</span>
+                    <span class="text-secondary">3 months ago</span>
                   </div>
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Maxime, perspiciatis eaque et corporis ratione minima
-                    architecto sunt quia nemo vero quos quidem blanditiis earum.
-                    Expedita eum quisquam quibusdam exercitationem eveniet!
+                    I had high hopes for the Skinceuticals C E Ferulic given all
+                    the rave reviews, but it didn’t quite work for me. While I
+                    did see a slight improvement in my skin’s texture and
+                    brightness after a few weeks, I found the formula too oily
+                    for my combination skin, especially during the day. The
+                    packaging is excellent, but for the price, I expected more
+                    noticeable results. It might work better for someone with
+                    drier skin.
                   </p>
 
                   <div class="d-flex justify-content-between my-3">
@@ -2057,7 +2181,7 @@
                             fill="var(--bs-success-subtle)"
                           />
                         </svg>
-                        12
+                        5
                       </button>
 
                       <button
@@ -2075,7 +2199,7 @@
                             d="M8.864 15.674c-.956.24-1.843-.484-1.908-1.42-.072-1.05-.23-2.015-.428-2.59-.125-.36-.479-1.012-1.04-1.638-.557-.624-1.282-1.179-2.131-1.41C2.685 8.432 2 7.85 2 7V3c0-.845.682-1.464 1.448-1.546 1.07-.113 1.564-.415 2.068-.723l.048-.029c.272-.166.578-.349.97-.484C6.931.08 7.395 0 8 0h3.5c.937 0 1.599.478 1.934 1.064.164.287.254.607.254.913 0 .152-.023.312-.077.464.201.262.38.577.488.9.11.33.172.762.004 1.15.069.13.12.268.159.403.077.27.113.567.113.856s-.036.586-.113.856c-.035.12-.08.244-.138.363.394.571.418 1.2.234 1.733-.206.592-.682 1.1-1.2 1.272-.847.283-1.803.276-2.516.211a10 10 0 0 1-.443-.05 9.36 9.36 0 0 1-.062 4.51c-.138.508-.55.848-1.012.964zM11.5 1H8c-.51 0-.863.068-1.14.163-.281.097-.506.229-.776.393l-.04.025c-.555.338-1.198.73-2.49.868-.333.035-.554.29-.554.55V7c0 .255.226.543.62.65 1.095.3 1.977.997 2.614 1.709.635.71 1.064 1.475 1.238 1.977.243.7.407 1.768.482 2.85.025.362.36.595.667.518l.262-.065c.16-.04.258-.144.288-.255a8.34 8.34 0 0 0-.145-4.726.5.5 0 0 1 .595-.643h.003l.014.004.058.013a9 9 0 0 0 1.036.157c.663.06 1.457.054 2.11-.163.175-.059.45-.301.57-.651.107-.308.087-.67-.266-1.021L12.793 7l.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581s-.027-.414-.075-.581c-.05-.174-.111-.273-.154-.315l-.353-.354.353-.354c.047-.047.109-.176.005-.488a2.2 2.2 0 0 0-.505-.804l-.353-.354.353-.354c.006-.005.041-.05.041-.17a.9.9 0 0 0-.121-.415C12.4 1.272 12.063 1 11.5 1"
                           />
                         </svg>
-                        0
+                        1
                       </button>
                     </div>
                     <div>
@@ -2124,7 +2248,9 @@
 
       <!-- Recommendation Product -->
       <div class="mt-3">
-        <h4>Recommended for you</h4>
+        <h2 class="pb-4 mb-4 border-bottom border-vor-lighter-400">
+          Recommended for you
+        </h2>
         <div class="row row-gap-4">
           <div class="col-6 col-lg-4 col-xl-3">
             <div
@@ -2156,6 +2282,24 @@
                       class="bi bi-star-fill"
                       viewBox="0 0 16 16"
                     >
+                      <defs>
+                        <linearGradient
+                          id="starsGradient"
+                          x1="0%"
+                          y1="0%"
+                          x2="100%"
+                          y2="100%"
+                        >
+                          <stop
+                            offset="0%"
+                            style="stop-color: var(--bs-orange)"
+                          />
+                          <stop
+                            offset="100%"
+                            style="stop-color: var(--bs-warning)"
+                          />
+                        </linearGradient>
+                      </defs>
                       <path
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
                         fill="url(#starsGradient)"
@@ -2184,7 +2328,7 @@
                     >
                       <path
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                        fill="url(#linGrad_1)"
+                        fill="url(#starsGradient)"
                       />
                     </svg>
                     <svg
@@ -2197,7 +2341,7 @@
                     >
                       <path
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                        fill="url(#linGrad_1)"
+                        fill="url(#starsGradient)"
                       />
                     </svg>
                     <svg
@@ -2210,7 +2354,7 @@
                     >
                       <path
                         d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"
-                        fill="url(#linGrad_1)"
+                        fill="url(#starsGradient)"
                       />
                     </svg>
                   </div>
@@ -2261,7 +2405,7 @@
                     >
                       <path
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                        fill="url(#linGrad_1)"
+                        fill="url(#starsGradient)"
                       />
                     </svg>
                     <svg
@@ -2274,7 +2418,7 @@
                     >
                       <path
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                        fill="url(#linGrad_1)"
+                        fill="url(#starsGradient)"
                       />
                     </svg>
                     <svg
@@ -2287,7 +2431,7 @@
                     >
                       <path
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                        fill="url(#linGrad_1)"
+                        fill="url(#starsGradient)"
                       />
                     </svg>
                     <svg
@@ -2300,7 +2444,7 @@
                     >
                       <path
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                        fill="url(#linGrad_1)"
+                        fill="url(#starsGradient)"
                       />
                     </svg>
                     <svg
@@ -2363,7 +2507,7 @@
                     >
                       <path
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                        fill="url(#linGrad_1)"
+                        fill="url(#starsGradient)"
                       />
                     </svg>
                     <svg
@@ -2376,7 +2520,7 @@
                     >
                       <path
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                        fill="url(#linGrad_1)"
+                        fill="url(#starsGradient)"
                       />
                     </svg>
                     <svg
@@ -2389,7 +2533,7 @@
                     >
                       <path
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                        fill="url(#linGrad_1)"
+                        fill="url(#starsGradient)"
                       />
                     </svg>
                     <svg
@@ -2402,7 +2546,7 @@
                     >
                       <path
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                        fill="url(#linGrad_1)"
+                        fill="url(#starsGradient)"
                       />
                     </svg>
                     <svg
@@ -2463,9 +2607,27 @@
                       class="bi bi-star-fill"
                       viewBox="0 0 16 16"
                     >
+                      <defs>
+                        <linearGradient
+                          id="starsGradient"
+                          x1="0%"
+                          y1="0%"
+                          x2="100%"
+                          y2="100%"
+                        >
+                          <stop
+                            offset="0%"
+                            style="stop-color: var(--bs-orange)"
+                          />
+                          <stop
+                            offset="100%"
+                            style="stop-color: var(--bs-warning)"
+                          />
+                        </linearGradient>
+                      </defs>
                       <path
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                        fill="url(#linGrad_1)"
+                        fill="url(#starsGradient)"
                       />
                     </svg>
                     <svg
@@ -2478,7 +2640,7 @@
                     >
                       <path
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                        fill="url(#linGrad_1)"
+                        fill="url(#starsGradient)"
                       />
                     </svg>
                     <svg
@@ -2491,7 +2653,7 @@
                     >
                       <path
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                        fill="url(#linGrad_1)"
+                        fill="url(#starsGradient)"
                       />
                     </svg>
                     <svg
@@ -2504,7 +2666,7 @@
                     >
                       <path
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-                        fill="url(#linGrad_1)"
+                        fill="url(#starsGradient)"
                       />
                     </svg>
                     <svg
@@ -2517,7 +2679,7 @@
                     >
                       <path
                         d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"
-                        fill="url(#linGrad_1)"
+                        fill="url(#starsGradient)"
                       />
                     </svg>
                   </div>
@@ -2533,6 +2695,117 @@
                   <p class="fw-medium m-0">Rp1.146.600</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Login / Register Form -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-sm modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header px-5 pt-4 pb-0 border-0">
+            <h1 class="modal-title fs-4" id="exampleModalLabel">Log in</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body px-5 pb-5">
+            <form>
+              <div class="form-floating">
+                <input
+                  type="email"
+                  class="form-control rounded-0 border-0 border-bottom px-0"
+                  id="exampleInputEmail1"
+                  placeholder="..."
+                />
+                <label for="exampleInputEmail1" class="form-label px-0"
+                  >Email address</label
+                >
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-0 border-0 border-bottom px-0"
+                  id="exampleInputPassword1"
+                  placeholder="..."
+                />
+                <label for="exampleInputPassword1" class="form-label px-0"
+                  >Password</label
+                >
+              </div>
+              <div class="form-check mb-3">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Remember me</label
+                >
+              </div>
+              <button
+                type="button"
+                class="btn btn-vor-primary w-100 fw-semibold"
+              >
+                Continue
+              </button>
+            </form>
+
+            <!-- switch to sign up -->
+            <p class="text-center text-secondary-emphasis my-3 fs-7">
+              Don't have any account?
+              <a href="#" class="link-vor-primary-subtle">Sign up here</a>
+            </p>
+
+            <!-- other option section -->
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <hr class="flex-grow-1 border-vor-lighter-400 opacity-100" />
+              <span class="px-3 fs-7">or continue with</span>
+              <hr class="flex-grow-1 border-vor-lighter-400 opacity-100" />
+            </div>
+
+            <div class="d-flex justify-content-around gap-3">
+              <button
+                type="button"
+                class="btn bg-white text-dark w-50 d-flex column-gap-2 align-items-center justify-content-center fw-medium"
+              >
+                <img
+                  src="../assets/img/google-logo.png"
+                  alt="img"
+                  width="24px"
+                />
+                Google
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary w-50 d-flex align-items-center justify-content-center column-gap-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-facebook"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                  />
+                </svg>
+                Facebook
+              </button>
             </div>
           </div>
         </div>
